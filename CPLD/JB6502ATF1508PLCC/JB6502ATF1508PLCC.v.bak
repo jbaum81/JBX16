@@ -1,0 +1,20 @@
+module JB6502ATF1508(
+	input clk,
+	input oe,
+	input rw,
+	input rst,
+	input [7:0] adrBusLo,
+	input [7:0] adrBusHi,
+	input [7:0] datBus
+	);
+	
+	
+	reg [7:0] _raBank = 0;
+	always @(negedge clk) begin
+		if (~rst)
+			_raBank <= 0;
+		else if (adrBusHi == 0 && adrBusLo == 0 && ~rw)
+			_raBank <= datBus;
+	end
+	
+endmodule

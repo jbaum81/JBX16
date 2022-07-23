@@ -1,0 +1,9 @@
+Fitter Status : Successful - Tue May 24 23:30:37 2022
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : JB6502ATF1508
+Top-level Entity Name : JB6502ATF1508
+Family : MAX7000S
+Device : EPM7128STC100-7
+Timing Models : Final
+Total macrocells : 62 / 128 ( 48 % )
+Total pins : 53 / 84 ( 63 % )

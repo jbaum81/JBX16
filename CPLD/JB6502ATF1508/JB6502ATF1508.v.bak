@@ -1,0 +1,55 @@
+module JB6502ATF1508(
+	input clk,
+	input oe,
+	input rw,
+	input pwrBtn,
+	input [7:0] adrBusLo,
+	input [7:0] adrBusHi,
+	input [7:0] datBus,
+	output [5:0] rBanks,
+	output v0En,
+	output v1En,
+	output rLow,
+	output clkWr,
+	output roEn,
+	output raEn,
+	output hr0En,
+	output hr1En,
+	output hr2En,
+	output hr3En,
+	output ioEn,
+	inout datDir,
+	output srlEn,
+	output pwrSig,
+	inout rst
+	);
+	
+	assign rBanks = 6'b000000;
+	
+	assign rLow = 1'b0;
+	assign clkWr = (~rw && clk) ? 1'b0 : 1'b1;
+
+	
+	assign v0En = 1;
+	assign hr0En = 1;
+	assign hr1En = 1;
+	assign hr2En = 1;
+	assign hr3En = 1;
+	assign srlEn = 1;
+	assign pwrSig = 1;
+	assign datDir = 1'bz;
+	assign rst = 1'bz;
+	
+
+	assign roEn = (adrBusHi[7:6] == 2'b11) ? 1'b0 : 1'b1;
+	assign ioEn = (adrBusHi == 8'b10011111) ? 1'b0 : 1'b1;
+	assign raEn = (roEn && _hrEn && ioEn) ? 1'b0 : 1'b1;
+	
+	wire _hrEn;
+	assign _hrEn = (adrBusHi[7:5] == 3'b101) ? 1'b0 : 1'b1;
+	
+	assign v1En = (~ioEn && adrBusLo[7:4] == 4'b0001 ) ? 1'b0 : 1'b1;
+	
+	
+
+endmodule

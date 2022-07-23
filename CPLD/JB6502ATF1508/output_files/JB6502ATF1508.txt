@@ -1,0 +1,26 @@
+Microchip Pof2jed  Version 4.45.1 Mar 13 2018
+Copyright 2018 Microchip. All Rights Reserved.
+
+  EPM7128STC100-7 --> 1508asTQFP100
+Input file                : D:\_Dev\cpld\JB6502ATF1508\output_files\JB6502ATF1508.pof
+Output file               : D:\_Dev\cpld\JB6502ATF1508\output_files\JB6502ATF1508.jed
+Conversion Report file    : D:\_Dev\cpld\JB6502ATF1508\output_files\JB6502ATF1508.txt
+
+Conversion is completed
+
+Options :  (1508 only)
+   Powerdown :		OFF
+   Security Bit :	AUTO
+   Slew Rate :		AUTO
+   PinClk :		OFF
+   Race Coverage :	ON
+   Pin Keeper :		OFF
+   Macrocell Low Power:	AUTO
+   Power Reset :	ALWAYS
+   ITD on GCLK1 :	ON
+   ITD on GCLK2 :	ON
+   ITD on GCLK3 :	ON
+   Open Collector :	AUTO
+   JTAG mode :		AUTO
+   TDI Pullup :		OFF
+   TMS Pullup :		OFF

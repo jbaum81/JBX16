@@ -1,0 +1,540 @@
+Fitter report for JB6502ATF1508PLCC
+Sat Jul 23 02:49:05 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. All Package Pins
+ 10. I/O Standard
+ 11. Dedicated Inputs I/O
+ 12. Output Pin Default Load For Reported TCO
+ 13. Fitter Resource Utilization by Entity
+ 14. Control Signals
+ 15. Global & Other Fast Signals
+ 16. Non-Global High Fan-Out Signals
+ 17. Other Routing Usage Summary
+ 18. LAB Macrocells
+ 19. Logic Cell Interconnection
+ 20. Fitter Device Options
+ 21. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Fitter Summary                                                              ;
++---------------------------+-------------------------------------------------+
+; Fitter Status             ; Successful - Sat Jul 23 02:49:05 2022           ;
+; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name             ; JB6502ATF1508PLCC                               ;
+; Top-level Entity Name     ; JB6502ATF1508PLCC                               ;
+; Family                    ; MAX7000S                                        ;
+; Device                    ; EPM7064SLC84-10                                 ;
+; Timing Models             ; Final                                           ;
+; Total macrocells          ; 42 / 64 ( 66 % )                                ;
+; Total pins                ; 56 / 68 ( 82 % )                                ;
++---------------------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                              ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                     ; Setting         ; Default Value ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Device                                                                     ; EPM7064SLC84-10 ;               ;
+; Use smart compilation                                                      ; Off             ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On              ; On            ;
+; Enable compact report table                                                ; Off             ; Off           ;
+; Optimize Multi-Corner Timing                                               ; Off             ; Off           ;
+; Optimize Timing for ECOs                                                   ; Off             ; Off           ;
+; Regenerate full fit report during ECO compiles                             ; Off             ; Off           ;
+; Optimize IOC Register Placement for Timing                                 ; Normal          ; Normal        ;
+; Fitter Initial Placement Seed                                              ; 1               ; 1             ;
+; Slow Slew Rate                                                             ; Off             ; Off           ;
+; Fitter Effort                                                              ; Auto Fit        ; Auto Fit      ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off             ; Off           ;
++----------------------------------------------------------------------------+-----------------+---------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in D:/_Dev/X16/JBX16/CPLD/JB6502ATF1508PLCC/output_files/JB6502ATF1508PLCC.pin.
+
+
++-------------------------------------------------+
+; Fitter Resource Usage Summary                   ;
++------------------------------+------------------+
+; Resource                     ; Usage            ;
++------------------------------+------------------+
+; Logic cells                  ; 42 / 64 ( 66 % ) ;
+; Registers                    ; 20 / 64 ( 31 % ) ;
+; Number of pterms used        ; 118              ;
+; I/O pins                     ; 56 / 68 ( 82 % ) ;
+;     -- Clock pins            ; 2 / 2 ( 100 % )  ;
+;     -- Dedicated input pins  ; 2 / 2 ( 100 % )  ;
+;                              ;                  ;
+; Global signals               ; 2                ;
+; Shareable expanders          ; 0 / 64 ( 0 % )   ;
+; Parallel expanders           ; 0 / 60 ( 0 % )   ;
+; Cells using turbo bit        ; 42 / 64 ( 66 % ) ;
+; Maximum fan-out              ; 38               ;
+; Highest non-global fan-out   ; 38               ;
+; Total fan-out                ; 568              ;
+; Average fan-out              ; 5.80             ;
++------------------------------+------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                        ;
++-------------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; Name        ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
++-------------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; adrBusHi[0] ; 40    ; --       ; 2   ; 25                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusHi[1] ; 36    ; --       ; 2   ; 25                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusHi[2] ; 35    ; --       ; 2   ; 25                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusHi[3] ; 34    ; --       ; 2   ; 25                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusHi[4] ; 33    ; --       ; 2   ; 25                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusHi[5] ; 37    ; --       ; 2   ; 37                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusHi[6] ; 39    ; --       ; 2   ; 38                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusHi[7] ; 41    ; --       ; 2   ; 38                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusLo[0] ; 44    ; --       ; 3   ; 16                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusLo[1] ; 45    ; --       ; 3   ; 19                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusLo[2] ; 46    ; --       ; 3   ; 19                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusLo[3] ; 48    ; --       ; 3   ; 19                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusLo[4] ; 49    ; --       ; 3   ; 22                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusLo[5] ; 50    ; --       ; 3   ; 23                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusLo[6] ; 51    ; --       ; 3   ; 23                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adrBusLo[7] ; 52    ; --       ; 3   ; 23                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; clk         ; 83    ; --       ; --  ; 4                     ; 0                  ; yes    ; no             ; TTL          ; User                 ;
+; datBus[0]   ; 15    ; --       ; 1   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; datBus[1]   ; 16    ; --       ; 1   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; datBus[2]   ; 24    ; --       ; 2   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; datBus[3]   ; 25    ; --       ; 2   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; datBus[4]   ; 54    ; --       ; 3   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; datBus[5]   ; 55    ; --       ; 3   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; datBus[6]   ; 63    ; --       ; 4   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; datBus[7]   ; 64    ; --       ; 4   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; oe          ; 84    ; --       ; --  ; 22                    ; 0                  ; yes    ; no             ; TTL          ; User                 ;
+; rst         ; 1     ; --       ; --  ; 16                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; rw          ; 2     ; --       ; --  ; 18                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
++-------------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                     ;
++-------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; Name        ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++-------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; adrBanks[0] ; 12    ; --       ; 1   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; adrBanks[1] ; 11    ; --       ; 1   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; adrBanks[2] ; 10    ; --       ; 1   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; adrBanks[3] ; 9     ; --       ; 1   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; adrBanks[4] ; 8     ; --       ; 1   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; adrBanks[5] ; 6     ; --       ; 1   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; adrBanks[6] ; 5     ; --       ; 1   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; adrBanks[7] ; 4     ; --       ; 1   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; clkWr       ; 22    ; --       ; 1   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; datDD       ; 21    ; --       ; 1   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; hr0En       ; 17    ; --       ; 1   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; hr1En       ; 18    ; --       ; 1   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; hr2En       ; 20    ; --       ; 1   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; hr3En       ; 27    ; --       ; 2   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; ioEn        ; 68    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; oeLow       ; 29    ; --       ; 2   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; raEn        ; 28    ; --       ; 2   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; roEn        ; 30    ; --       ; 2   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; srlEn       ; 67    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; sysClk      ; 70    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; v0En        ; 31    ; --       ; 2   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; v1En        ; 65    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; viaClk      ; 69    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; ymfEn       ; 77    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
++-------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                      ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; 1        ; 0          ; --       ; rst            ; input  ; TTL          ;         ; Y               ;
+; 2        ; 1          ; --       ; rw             ; input  ; TTL          ;         ; Y               ;
+; 3        ; 2          ; --       ; VCCINT         ; power  ;              ; 5.0V    ;                 ;
+; 4        ; 3          ; --       ; adrBanks[7]    ; output ; TTL          ;         ; Y               ;
+; 5        ; 4          ; --       ; adrBanks[6]    ; output ; TTL          ;         ; Y               ;
+; 6        ; 5          ; --       ; adrBanks[5]    ; output ; TTL          ;         ; Y               ;
+; 7        ; 6          ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 8        ; 7          ; --       ; adrBanks[4]    ; output ; TTL          ;         ; Y               ;
+; 9        ; 8          ; --       ; adrBanks[3]    ; output ; TTL          ;         ; Y               ;
+; 10       ; 9          ; --       ; adrBanks[2]    ; output ; TTL          ;         ; Y               ;
+; 11       ; 10         ; --       ; adrBanks[1]    ; output ; TTL          ;         ; Y               ;
+; 12       ; 11         ; --       ; adrBanks[0]    ; output ; TTL          ;         ; Y               ;
+; 13       ; 12         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 14       ; 13         ; --       ; TDI            ; input  ; TTL          ;         ; Y               ;
+; 15       ; 14         ; --       ; datBus[0]      ; input  ; TTL          ;         ; Y               ;
+; 16       ; 15         ; --       ; datBus[1]      ; input  ; TTL          ;         ; Y               ;
+; 17       ; 16         ; --       ; hr0En          ; output ; TTL          ;         ; Y               ;
+; 18       ; 17         ; --       ; hr1En          ; output ; TTL          ;         ; Y               ;
+; 19       ; 18         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 20       ; 19         ; --       ; hr2En          ; output ; TTL          ;         ; Y               ;
+; 21       ; 20         ; --       ; datDD          ; output ; TTL          ;         ; Y               ;
+; 22       ; 21         ; --       ; clkWr          ; output ; TTL          ;         ; Y               ;
+; 23       ; 22         ; --       ; TMS            ; input  ; TTL          ;         ; Y               ;
+; 24       ; 23         ; --       ; datBus[2]      ; input  ; TTL          ;         ; Y               ;
+; 25       ; 24         ; --       ; datBus[3]      ; input  ; TTL          ;         ; Y               ;
+; 26       ; 25         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 27       ; 26         ; --       ; hr3En          ; output ; TTL          ;         ; Y               ;
+; 28       ; 27         ; --       ; raEn           ; output ; TTL          ;         ; Y               ;
+; 29       ; 28         ; --       ; oeLow          ; output ; TTL          ;         ; Y               ;
+; 30       ; 29         ; --       ; roEn           ; output ; TTL          ;         ; Y               ;
+; 31       ; 30         ; --       ; v0En           ; output ; TTL          ;         ; Y               ;
+; 32       ; 31         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 33       ; 32         ; --       ; adrBusHi[4]    ; input  ; TTL          ;         ; Y               ;
+; 34       ; 33         ; --       ; adrBusHi[3]    ; input  ; TTL          ;         ; Y               ;
+; 35       ; 34         ; --       ; adrBusHi[2]    ; input  ; TTL          ;         ; Y               ;
+; 36       ; 35         ; --       ; adrBusHi[1]    ; input  ; TTL          ;         ; Y               ;
+; 37       ; 36         ; --       ; adrBusHi[5]    ; input  ; TTL          ;         ; Y               ;
+; 38       ; 37         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 39       ; 38         ; --       ; adrBusHi[6]    ; input  ; TTL          ;         ; Y               ;
+; 40       ; 39         ; --       ; adrBusHi[0]    ; input  ; TTL          ;         ; Y               ;
+; 41       ; 40         ; --       ; adrBusHi[7]    ; input  ; TTL          ;         ; Y               ;
+; 42       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 43       ; 42         ; --       ; VCCINT         ; power  ;              ; 5.0V    ;                 ;
+; 44       ; 43         ; --       ; adrBusLo[0]    ; input  ; TTL          ;         ; Y               ;
+; 45       ; 44         ; --       ; adrBusLo[1]    ; input  ; TTL          ;         ; Y               ;
+; 46       ; 45         ; --       ; adrBusLo[2]    ; input  ; TTL          ;         ; Y               ;
+; 47       ; 46         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 48       ; 47         ; --       ; adrBusLo[3]    ; input  ; TTL          ;         ; Y               ;
+; 49       ; 48         ; --       ; adrBusLo[4]    ; input  ; TTL          ;         ; Y               ;
+; 50       ; 49         ; --       ; adrBusLo[5]    ; input  ; TTL          ;         ; Y               ;
+; 51       ; 50         ; --       ; adrBusLo[6]    ; input  ; TTL          ;         ; Y               ;
+; 52       ; 51         ; --       ; adrBusLo[7]    ; input  ; TTL          ;         ; Y               ;
+; 53       ; 52         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 54       ; 53         ; --       ; datBus[4]      ; input  ; TTL          ;         ; Y               ;
+; 55       ; 54         ; --       ; datBus[5]      ; input  ; TTL          ;         ; Y               ;
+; 56       ; 55         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 57       ; 56         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 58       ; 57         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 59       ; 58         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 60       ; 59         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 61       ; 60         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 62       ; 61         ; --       ; TCK            ; input  ; TTL          ;         ; Y               ;
+; 63       ; 62         ; --       ; datBus[6]      ; input  ; TTL          ;         ; Y               ;
+; 64       ; 63         ; --       ; datBus[7]      ; input  ; TTL          ;         ; Y               ;
+; 65       ; 64         ; --       ; v1En           ; output ; TTL          ;         ; Y               ;
+; 66       ; 65         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 67       ; 66         ; --       ; srlEn          ; output ; TTL          ;         ; Y               ;
+; 68       ; 67         ; --       ; ioEn           ; output ; TTL          ;         ; Y               ;
+; 69       ; 68         ; --       ; viaClk         ; output ; TTL          ;         ; Y               ;
+; 70       ; 69         ; --       ; sysClk         ; output ; TTL          ;         ; Y               ;
+; 71       ; 70         ; --       ; TDO            ; output ; TTL          ;         ; Y               ;
+; 72       ; 71         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 73       ; 72         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 74       ; 73         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 75       ; 74         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 76       ; 75         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 77       ; 76         ; --       ; ymfEn          ; output ; TTL          ;         ; Y               ;
+; 78       ; 77         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 79       ; 78         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 80       ; 79         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 81       ; 80         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 82       ; 81         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 83       ; 82         ; --       ; clk            ; input  ; TTL          ;         ; Y               ;
+; 84       ; 83         ; --       ; oe             ; input  ; TTL          ;         ; Y               ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++--------------------------------------------------------------------------------------------------+
+; I/O Standard                                                                                     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; I/O Standard ; Input Vref ; Dedicated Input Pins ; Pins in I/O Bank1 ; Pins in I/O Bank2 ; Total ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; TTL          ; -          ; 4                    ; 0                 ; 0                 ; 4     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+
+
++--------------------------------------------------------------------+
+; Dedicated Inputs I/O                                               ;
++------+-------+-------+-------+--------------+------------+---------+
+; Name ; Pin # ; Type  ; VCCIO ; I/O Standard ; Input Vref ; Current ;
++------+-------+-------+-------+--------------+------------+---------+
+; clk  ; 83    ; Input ; --    ; TTL          ; -          ; 0 mA    ;
+; oe   ; 84    ; Input ; --    ; TTL          ; -          ; 0 mA    ;
+; rst  ; 1     ; Input ; --    ; TTL          ; -          ; 0 mA    ;
+; rw   ; 2     ; Input ; --    ; TTL          ; -          ; 0 mA    ;
++------+-------+-------+-------+--------------+------------+---------+
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; 3.3-V LVTTL  ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS ; 10 pF ; Not Available          ;
+; TTL          ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++-------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                               ;
++----------------------------+------------+------+---------------------+--------------+
+; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+------------+------+---------------------+--------------+
+; |JB6502ATF1508PLCC         ; 42         ; 56   ; |JB6502ATF1508PLCC  ; work         ;
++----------------------------+------------+------+---------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                 ;
++---------+----------+---------+---------------+--------+----------------------+------------------+
+; Name    ; Location ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ;
++---------+----------+---------+---------------+--------+----------------------+------------------+
+; clk     ; PIN_83   ; 4       ; Clock         ; yes    ; On                   ; --               ;
+; clk8sys ; LC55     ; 21      ; Clock         ; no     ; --                   ; --               ;
+; oe      ; PIN_84   ; 22      ; Output enable ; yes    ; On                   ; --               ;
++---------+----------+---------+---------------+--------+----------------------+------------------+
+
+
++---------------------------------------------------------------------+
+; Global & Other Fast Signals                                         ;
++------+----------+---------+----------------------+------------------+
+; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
++------+----------+---------+----------------------+------------------+
+; clk  ; PIN_83   ; 4       ; On                   ; --               ;
+; oe   ; PIN_84   ; 22      ; On                   ; --               ;
++------+----------+---------+----------------------+------------------+
+
+
++---------------------------------+
+; Non-Global High Fan-Out Signals ;
++-----------------+---------------+
+; Name            ; Fan-Out       ;
++-----------------+---------------+
+; adrBusHi[7]     ; 38            ;
+; adrBusHi[6]     ; 38            ;
+; adrBusHi[5]     ; 37            ;
+; adrBusHi[4]     ; 25            ;
+; adrBusHi[3]     ; 25            ;
+; adrBusHi[2]     ; 25            ;
+; adrBusHi[1]     ; 25            ;
+; adrBusHi[0]     ; 25            ;
+; adrBusLo[7]     ; 23            ;
+; adrBusLo[6]     ; 23            ;
+; adrBusLo[5]     ; 23            ;
+; adrBusLo[4]     ; 22            ;
+; clk8sys         ; 21            ;
+; adrBusLo[3]     ; 19            ;
+; adrBusLo[2]     ; 19            ;
+; adrBusLo[1]     ; 19            ;
+; rw              ; 18            ;
+; adrBusLo[0]     ; 16            ;
+; rst             ; 16            ;
+; _raBank[7]      ; 6             ;
+; _raBank[6]      ; 6             ;
+; stretch         ; 3             ;
+; stretchCnt      ; 3             ;
+; datBus[7]       ; 2             ;
+; datBus[6]       ; 2             ;
+; datBus[5]       ; 2             ;
+; datBus[4]       ; 2             ;
+; datBus[3]       ; 2             ;
+; datBus[2]       ; 2             ;
+; datBus[1]       ; 2             ;
+; datBus[0]       ; 2             ;
+; _raBank[5]      ; 2             ;
+; _raBank[4]      ; 2             ;
+; _raBank[3]      ; 2             ;
+; _raBank[2]      ; 2             ;
+; _raBank[1]      ; 2             ;
+; _roBank[7]      ; 2             ;
+; _roBank[6]      ; 2             ;
+; _roBank[5]      ; 2             ;
+; _roBank[4]      ; 2             ;
+; _raBank[0]      ; 2             ;
+; _roBank[0]      ; 2             ;
+; _roBank[1]      ; 2             ;
+; _roBank[2]      ; 2             ;
+; _roBank[3]      ; 2             ;
+; _adrBanks[7]~61 ; 1             ;
+; _adrBanks[6]~56 ; 1             ;
+; _adrBanks[5]~51 ; 1             ;
+; _adrBanks[4]~46 ; 1             ;
+; _adrBanks[3]~41 ; 1             ;
+; _adrBanks[2]~36 ; 1             ;
+; _adrBanks[1]~31 ; 1             ;
+; _adrBanks[0]~26 ; 1             ;
+; hr3En~4         ; 1             ;
+; hr2En~3         ; 1             ;
+; hr1En~4         ; 1             ;
+; hr0En~3         ; 1             ;
+; comb~24         ; 1             ;
+; clkWr~3         ; 1             ;
+; datDD~5         ; 1             ;
+; comb~21         ; 1             ;
+; comb~18         ; 1             ;
+; comb~15         ; 1             ;
+; comb~13         ; 1             ;
+; Equal6~3        ; 1             ;
+; clk8via         ; 1             ;
+; rw~1            ; 1             ;
+; Equal0~3        ; 1             ;
++-----------------+---------------+
+
+
++--------------------------------------------------+
+; Other Routing Usage Summary                      ;
++-----------------------------+--------------------+
+; Other Routing Resource Type ; Usage              ;
++-----------------------------+--------------------+
+; Output enables              ; 1 / 6 ( 17 % )     ;
+; PIA buffers                 ; 110 / 144 ( 76 % ) ;
++-----------------------------+--------------------+
+
+
++-----------------------------------------------------------------------+
+; LAB Macrocells                                                        ;
++-----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 10.50) ; Number of LABs  (Total = 4) ;
++-----------------------------------------+-----------------------------+
+; 0                                       ; 0                           ;
+; 1                                       ; 0                           ;
+; 2                                       ; 0                           ;
+; 3                                       ; 0                           ;
+; 4                                       ; 0                           ;
+; 5                                       ; 0                           ;
+; 6                                       ; 0                           ;
+; 7                                       ; 0                           ;
+; 8                                       ; 2                           ;
+; 9                                       ; 0                           ;
+; 10                                      ; 0                           ;
+; 11                                      ; 0                           ;
+; 12                                      ; 0                           ;
+; 13                                      ; 2                           ;
++-----------------------------------------+-----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
++-----+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                                                                                                                                                                   ; Output                                                                                                                                                                                                                                        ;
++-----+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC9        ; _raBank[0], adrBusHi[5], adrBusHi[6], adrBusHi[7], _roBank[0]                                                                                                                                                                                           ; adrBanks[0]                                                                                                                                                                                                                                   ;
+;  A  ; LC3        ; _raBank[6], _raBank[7], adrBusHi[5], adrBusHi[6], adrBusHi[7]                                                                                                                                                                                           ; hr2En                                                                                                                                                                                                                                         ;
+;  A  ; LC4        ; _raBank[7], _raBank[6], adrBusHi[5], adrBusHi[6], adrBusHi[7]                                                                                                                                                                                           ; hr1En                                                                                                                                                                                                                                         ;
+;  A  ; LC16       ; _roBank[7], adrBusHi[5], adrBusHi[6], adrBusHi[7], _raBank[7]                                                                                                                                                                                           ; adrBanks[7]                                                                                                                                                                                                                                   ;
+;  A  ; LC5        ; _raBank[6], _raBank[7], adrBusHi[5], adrBusHi[6], adrBusHi[7]                                                                                                                                                                                           ; hr0En                                                                                                                                                                                                                                         ;
+;  A  ; LC11       ; _raBank[2], adrBusHi[5], adrBusHi[6], adrBusHi[7], _roBank[2]                                                                                                                                                                                           ; adrBanks[2]                                                                                                                                                                                                                                   ;
+;  A  ; LC15       ; _roBank[6], adrBusHi[5], adrBusHi[6], adrBusHi[7], _raBank[6]                                                                                                                                                                                           ; adrBanks[6]                                                                                                                                                                                                                                   ;
+;  A  ; LC14       ; _raBank[5], adrBusHi[5], adrBusHi[6], adrBusHi[7], _roBank[5]                                                                                                                                                                                           ; adrBanks[5]                                                                                                                                                                                                                                   ;
+;  A  ; LC2        ; adrBusLo[5], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[6], adrBusLo[7]                                                                                                           ; datDD                                                                                                                                                                                                                                         ;
+;  A  ; LC13       ; _raBank[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], _roBank[4]                                                                                                                                                                                           ; adrBanks[4]                                                                                                                                                                                                                                   ;
+;  A  ; LC12       ; _raBank[3], adrBusHi[5], adrBusHi[6], adrBusHi[7], _roBank[3]                                                                                                                                                                                           ; adrBanks[3]                                                                                                                                                                                                                                   ;
+;  A  ; LC10       ; _raBank[1], adrBusHi[5], adrBusHi[6], adrBusHi[7], _roBank[1]                                                                                                                                                                                           ; adrBanks[1]                                                                                                                                                                                                                                   ;
+;  A  ; LC1        ; clk8sys, rw                                                                                                                                                                                                                                             ; clkWr                                                                                                                                                                                                                                         ;
+;  B  ; LC26       ; adrBusHi[6], adrBusHi[7]                                                                                                                                                                                                                                ; roEn                                                                                                                                                                                                                                          ;
+;  B  ; LC27       ; rw                                                                                                                                                                                                                                                      ; oeLow                                                                                                                                                                                                                                         ;
+;  B  ; LC20       ; datBus[6], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _roBank[6], clk8sys ; _roBank[6], _adrBanks[6]~56                                                                                                                                                                                                                   ;
+;  B  ; LC28       ; adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[7], adrBusHi[5], adrBusHi[6]                                                                                                                                                  ; raEn                                                                                                                                                                                                                                          ;
+;  B  ; LC24       ; datBus[0], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _roBank[0], clk8sys ; _roBank[0], _adrBanks[0]~26                                                                                                                                                                                                                   ;
+;  B  ; LC19       ; datBus[0], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _raBank[0], clk8sys ; _raBank[0], _adrBanks[0]~26                                                                                                                                                                                                                   ;
+;  B  ; LC17       ; datBus[4], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _roBank[4], clk8sys ; _roBank[4], _adrBanks[4]~46                                                                                                                                                                                                                   ;
+;  B  ; LC18       ; datBus[5], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _roBank[5], clk8sys ; _roBank[5], _adrBanks[5]~51                                                                                                                                                                                                                   ;
+;  B  ; LC25       ; adrBusLo[4], adrBusLo[5], adrBusLo[6], adrBusLo[7], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7]                                                                                              ; v0En                                                                                                                                                                                                                                          ;
+;  B  ; LC22       ; datBus[4], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _raBank[4], clk8sys ; _raBank[4], _adrBanks[4]~46                                                                                                                                                                                                                   ;
+;  B  ; LC23       ; datBus[5], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _raBank[5], clk8sys ; _raBank[5], _adrBanks[5]~51                                                                                                                                                                                                                   ;
+;  B  ; LC21       ; datBus[6], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _raBank[6], clk8sys ; _raBank[6], hr0En~3, hr1En~4, hr2En~3, hr3En~4, _adrBanks[6]~56                                                                                                                                                                               ;
+;  B  ; LC29       ; _raBank[6], _raBank[7], adrBusHi[5], adrBusHi[6], adrBusHi[7]                                                                                                                                                                                           ; hr3En                                                                                                                                                                                                                                         ;
+;  C  ; LC38       ; datBus[1], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _raBank[1], clk8sys ; _raBank[1], _adrBanks[1]~31                                                                                                                                                                                                                   ;
+;  C  ; LC35       ; datBus[2], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _raBank[2], clk8sys ; _raBank[2], _adrBanks[2]~36                                                                                                                                                                                                                   ;
+;  C  ; LC33       ; datBus[7], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _raBank[7], clk8sys ; _raBank[7], hr0En~3, hr1En~4, hr2En~3, hr3En~4, _adrBanks[7]~61                                                                                                                                                                               ;
+;  C  ; LC34       ; datBus[1], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _roBank[1], clk8sys ; _roBank[1], _adrBanks[1]~31                                                                                                                                                                                                                   ;
+;  C  ; LC40       ; datBus[2], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _roBank[2], clk8sys ; _roBank[2], _adrBanks[2]~36                                                                                                                                                                                                                   ;
+;  C  ; LC36       ; datBus[3], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _raBank[3], clk8sys ; _raBank[3], _adrBanks[3]~41                                                                                                                                                                                                                   ;
+;  C  ; LC39       ; datBus[3], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _roBank[3], clk8sys ; _roBank[3], _adrBanks[3]~41                                                                                                                                                                                                                   ;
+;  C  ; LC37       ; datBus[7], adrBusLo[0], rw, adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], rst, _roBank[7], clk8sys ; _roBank[7], _adrBanks[7]~61                                                                                                                                                                                                                   ;
+;  D  ; LC54       ; clk                                                                                                                                                                                                                                                     ; viaClk                                                                                                                                                                                                                                        ;
+;  D  ; LC61       ; adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], clk8sys                                              ; ymfEn                                                                                                                                                                                                                                         ;
+;  D  ; LC55       ; clk, stretch, stretchCnt                                                                                                                                                                                                                                ; stretchCnt, stretch, clkWr~3, _roBank[3], _roBank[2], _roBank[1], _roBank[0], comb~24, _raBank[0], _roBank[4], _roBank[5], _roBank[6], _roBank[7], _raBank[1], _raBank[2], _raBank[3], _raBank[4], _raBank[5], _raBank[6], _raBank[7], sysClk ;
+;  D  ; LC56       ; clk, adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], clk8sys, stretch, stretchCnt                    ; stretchCnt, stretch, clk8sys                                                                                                                                                                                                                  ;
+;  D  ; LC49       ; clk, adrBusLo[1], adrBusLo[2], adrBusLo[3], adrBusLo[5], adrBusLo[4], adrBusLo[7], adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7], stretch, clk8sys, stretchCnt                    ; stretchCnt, stretch, clk8sys                                                                                                                                                                                                                  ;
+;  D  ; LC52       ; adrBusLo[5], adrBusLo[4], adrBusLo[7], adrBusLo[6], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7]                                                                                              ; srlEn                                                                                                                                                                                                                                         ;
+;  D  ; LC51       ; adrBusLo[4], adrBusLo[5], adrBusLo[6], adrBusLo[7], adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7]                                                                                              ; v1En                                                                                                                                                                                                                                          ;
+;  D  ; LC53       ; adrBusHi[0], adrBusHi[1], adrBusHi[2], adrBusHi[3], adrBusHi[4], adrBusHi[5], adrBusHi[6], adrBusHi[7]                                                                                                                                                  ; ioEn                                                                                                                                                                                                                                          ;
++-----+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Fitter Device Options                                         ;
++----------------------------------------------+----------------+
+; Option                                       ; Setting        ;
++----------------------------------------------+----------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off            ;
+; Enable device-wide reset (DEV_CLRn)          ; Off            ;
+; Enable device-wide output enable (DEV_OE)    ; Off            ;
+; Enable INIT_DONE output                      ; Off            ;
+; Configuration scheme                         ; Passive Serial ;
+; Security bit                                 ; Off            ;
+; Base pin-out file on sameframe device        ; Off            ;
++----------------------------------------------+----------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (119006): Selected device EPM7064SLC84-10 for design "JB6502ATF1508PLCC"
+Warning (15705): Ignored locations or region assignments to the following nodes
+    Warning (15706): Node "TCK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TDI" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TDO" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TMS" is assigned to location or region, but does not exist in design
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4675 megabytes
+    Info: Processing ended: Sat Jul 23 02:49:05 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

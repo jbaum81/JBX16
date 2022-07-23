@@ -1,0 +1,892 @@
+TimeQuest Timing Analyzer report for JB6502ATF1508PLCC
+Sat Jul 23 02:49:07 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clk8sys'
+ 12. Setup: 'clk'
+ 13. Hold: 'clk'
+ 14. Hold: 'clk8sys'
+ 15. Minimum Pulse Width: 'clk8sys'
+ 16. Minimum Pulse Width: 'clk'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Propagation Delay
+ 22. Minimum Propagation Delay
+ 23. Setup Transfers
+ 24. Hold Transfers
+ 25. Report TCCS
+ 26. Report RSKM
+ 27. Unconstrained Paths
+ 28. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; JB6502ATF1508PLCC                                                 ;
+; Device Family      ; MAX7000S                                                          ;
+; Device Name        ; EPM7064SLC84-10                                                   ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Slow Model                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                              ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets     ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }     ;
+; clk8sys    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk8sys } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+
+
++-------------------------------------------------+
+; Fmax Summary                                    ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 100.0 MHz ; 100.0 MHz       ; clk        ;      ;
+; 100.0 MHz ; 100.0 MHz       ; clk8sys    ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------+
+; Setup Summary                    ;
++---------+--------+---------------+
+; Clock   ; Slack  ; End Point TNS ;
++---------+--------+---------------+
+; clk8sys ; -9.000 ; -144.000      ;
+; clk     ; -9.000 ; -36.000       ;
++---------+--------+---------------+
+
+
++---------------------------------+
+; Hold Summary                    ;
++---------+-------+---------------+
+; Clock   ; Slack ; End Point TNS ;
++---------+-------+---------------+
+; clk     ; 1.500 ; 0.000         ;
+; clk8sys ; 5.000 ; 0.000         ;
++---------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++----------------------------------+
+; Minimum Pulse Width Summary      ;
++---------+--------+---------------+
+; Clock   ; Slack  ; End Point TNS ;
++---------+--------+---------------+
+; clk8sys ; -3.500 ; -112.000      ;
+; clk     ; -3.500 ; -28.000       ;
++---------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Setup: 'clk8sys'                                                                                       ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; -9.000 ; _raBank[7] ; _raBank[7] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _raBank[6] ; _raBank[6] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _raBank[5] ; _raBank[5] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _raBank[4] ; _raBank[4] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _raBank[3] ; _raBank[3] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _raBank[2] ; _raBank[2] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _raBank[1] ; _raBank[1] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _roBank[7] ; _roBank[7] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _roBank[6] ; _roBank[6] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _roBank[5] ; _roBank[5] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _roBank[4] ; _roBank[4] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _raBank[0] ; _raBank[0] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _roBank[0] ; _roBank[0] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _roBank[1] ; _roBank[1] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _roBank[2] ; _roBank[2] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; _roBank[3] ; _roBank[3] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                           ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; -9.000 ; clk8via    ; clk8via    ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretch    ; clk8sys    ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretchCnt ; clk8sys    ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretch    ; stretch    ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretchCnt ; stretch    ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretchCnt ; stretchCnt ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretch    ; stretchCnt ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -6.000 ; clk8sys    ; clk8sys    ; clk8sys      ; clk         ; 0.500        ; 1.500      ; 8.000      ;
+; -6.000 ; clk8sys    ; stretch    ; clk8sys      ; clk         ; 0.500        ; 1.500      ; 8.000      ;
+; -6.000 ; clk8sys    ; stretchCnt ; clk8sys      ; clk         ; 0.500        ; 1.500      ; 8.000      ;
+; -5.500 ; clk8sys    ; clk8sys    ; clk8sys      ; clk         ; 1.000        ; 1.500      ; 8.000      ;
+; -5.500 ; clk8sys    ; stretch    ; clk8sys      ; clk         ; 1.000        ; 1.500      ; 8.000      ;
+; -5.500 ; clk8sys    ; stretchCnt ; clk8sys      ; clk         ; 1.000        ; 1.500      ; 8.000      ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                           ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+; 1.500 ; clk8sys    ; clk8sys    ; clk8sys      ; clk         ; 0.000        ; 1.500      ; 8.000      ;
+; 1.500 ; clk8sys    ; stretch    ; clk8sys      ; clk         ; 0.000        ; 1.500      ; 8.000      ;
+; 1.500 ; clk8sys    ; stretchCnt ; clk8sys      ; clk         ; 0.000        ; 1.500      ; 8.000      ;
+; 2.000 ; clk8sys    ; clk8sys    ; clk8sys      ; clk         ; -0.500       ; 1.500      ; 8.000      ;
+; 2.000 ; clk8sys    ; stretch    ; clk8sys      ; clk         ; -0.500       ; 1.500      ; 8.000      ;
+; 2.000 ; clk8sys    ; stretchCnt ; clk8sys      ; clk         ; -0.500       ; 1.500      ; 8.000      ;
+; 5.000 ; clk8via    ; clk8via    ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretch    ; clk8sys    ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretchCnt ; clk8sys    ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretch    ; stretch    ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretchCnt ; stretch    ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretchCnt ; stretchCnt ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretch    ; stretchCnt ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Hold: 'clk8sys'                                                                                       ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+; 5.000 ; _raBank[7] ; _raBank[7] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _raBank[6] ; _raBank[6] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _raBank[5] ; _raBank[5] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _raBank[4] ; _raBank[4] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _raBank[3] ; _raBank[3] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _raBank[2] ; _raBank[2] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _raBank[1] ; _raBank[1] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _roBank[7] ; _roBank[7] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _roBank[6] ; _roBank[6] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _roBank[5] ; _roBank[5] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _roBank[4] ; _roBank[4] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _raBank[0] ; _raBank[0] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _roBank[0] ; _roBank[0] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _roBank[1] ; _roBank[1] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _roBank[2] ; _roBank[2] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; _roBank[3] ; _roBank[3] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'clk8sys'                                                                     ;
++--------+--------------+----------------+------------------+---------+------------+-----------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target          ;
++--------+--------------+----------------+------------------+---------+------------+-----------------+
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _raBank[0]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _raBank[0]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _raBank[1]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _raBank[1]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _raBank[2]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _raBank[2]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _raBank[3]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _raBank[3]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _raBank[4]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _raBank[4]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _raBank[5]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _raBank[5]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _raBank[6]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _raBank[6]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _raBank[7]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _raBank[7]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _roBank[0]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _roBank[0]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _roBank[1]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _roBank[1]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _roBank[2]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _roBank[2]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _roBank[3]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _roBank[3]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _roBank[4]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _roBank[4]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _roBank[5]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _roBank[5]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _roBank[6]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _roBank[6]      ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk8sys ; Fall       ; _roBank[7]      ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk8sys ; Fall       ; _roBank[7]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _raBank[0]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _raBank[0]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _raBank[1]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _raBank[1]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _raBank[2]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _raBank[2]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _raBank[3]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _raBank[3]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _raBank[4]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _raBank[4]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _raBank[5]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _raBank[5]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _raBank[6]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _raBank[6]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _raBank[7]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _raBank[7]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _roBank[0]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _roBank[0]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _roBank[1]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _roBank[1]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _roBank[2]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _roBank[2]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _roBank[3]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _roBank[3]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _roBank[4]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _roBank[4]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _roBank[5]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _roBank[5]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _roBank[6]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _roBank[6]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; _roBank[7]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; _roBank[7]|[20] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk8sys ; Rise       ; clk8sys|dataout ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk8sys ; Rise       ; clk8sys|dataout ;
++--------+--------------+----------------+------------------+---------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'clk'                                                                      ;
++--------+--------------+----------------+------------------+-------+------------+----------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target         ;
++--------+--------------+----------------+------------------+-------+------------+----------------+
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk   ; Rise       ; clk8sys        ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk   ; Rise       ; clk8sys        ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk   ; Rise       ; clk8via        ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk   ; Rise       ; clk8via        ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk   ; Rise       ; stretch        ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk   ; Rise       ; stretch        ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk   ; Rise       ; stretchCnt     ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk   ; Rise       ; stretchCnt     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk8sys|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk8sys|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk8via|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk8via|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|dataout    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|dataout    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; stretchCnt|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; stretchCnt|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; stretch|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; stretch|clk    ;
++--------+--------------+----------------+------------------+-------+------------+----------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; adrBusHi[*]  ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusHi[0] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusHi[1] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusHi[2] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusHi[3] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusHi[4] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusHi[5] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusHi[6] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusHi[7] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+; adrBusLo[*]  ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusLo[1] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusLo[2] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusLo[3] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusLo[4] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusLo[5] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusLo[6] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+;  adrBusLo[7] ; clk        ; 7.000 ; 7.000 ; Rise       ; clk             ;
+; adrBusHi[*]  ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusHi[0] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusHi[1] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusHi[2] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusHi[3] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusHi[4] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusHi[5] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusHi[6] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusHi[7] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+; adrBusLo[*]  ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusLo[0] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusLo[1] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusLo[2] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusLo[3] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusLo[4] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusLo[5] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusLo[6] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  adrBusLo[7] ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+; datBus[*]    ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  datBus[0]   ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  datBus[1]   ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  datBus[2]   ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  datBus[3]   ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  datBus[4]   ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  datBus[5]   ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  datBus[6]   ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+;  datBus[7]   ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+; rst          ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
+; rw           ; clk8sys    ; 2.500 ; 2.500 ; Fall       ; clk8sys         ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; adrBusHi[*]  ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusHi[0] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusHi[1] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusHi[2] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusHi[3] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusHi[4] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusHi[5] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusHi[6] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusHi[7] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+; adrBusLo[*]  ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusLo[1] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusLo[2] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusLo[3] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusLo[4] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusLo[5] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusLo[6] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+;  adrBusLo[7] ; clk        ; -2.000 ; -2.000 ; Rise       ; clk             ;
+; adrBusHi[*]  ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusHi[0] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusHi[1] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusHi[2] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusHi[3] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusHi[4] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusHi[5] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusHi[6] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusHi[7] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+; adrBusLo[*]  ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusLo[0] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusLo[1] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusLo[2] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusLo[3] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusLo[4] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusLo[5] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusLo[6] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  adrBusLo[7] ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+; datBus[*]    ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  datBus[0]   ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  datBus[1]   ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  datBus[2]   ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  datBus[3]   ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  datBus[4]   ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  datBus[5]   ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  datBus[6]   ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+;  datBus[7]   ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+; rst          ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
+; rw           ; clk8sys    ; 2.500  ; 2.500  ; Fall       ; clk8sys         ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; viaClk       ; clk        ; 5.000  ; 5.000  ; Rise       ; clk             ;
+; clkWr        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
+; sysClk       ; clk8sys    ; 1.500  ;        ; Rise       ; clk8sys         ;
+; ymfEn        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
+; adrBanks[*]  ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[0] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[1] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[2] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[3] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[4] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[5] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[6] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[7] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+; clkWr        ; clk8sys    ;        ; 9.500  ; Fall       ; clk8sys         ;
+; hr0En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+; hr1En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+; hr2En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+; hr3En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+; sysClk       ; clk8sys    ;        ; 1.500  ; Fall       ; clk8sys         ;
+; ymfEn        ; clk8sys    ;        ; 9.500  ; Fall       ; clk8sys         ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; viaClk       ; clk        ; 5.000  ; 5.000  ; Rise       ; clk             ;
+; clkWr        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
+; sysClk       ; clk8sys    ; 1.500  ;        ; Rise       ; clk8sys         ;
+; ymfEn        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
+; adrBanks[*]  ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[0] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[1] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[2] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[3] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[4] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[5] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[6] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+;  adrBanks[7] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+; clkWr        ; clk8sys    ;        ; 9.500  ; Fall       ; clk8sys         ;
+; hr0En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+; hr1En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+; hr2En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+; hr3En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
+; sysClk       ; clk8sys    ;        ; 1.500  ; Fall       ; clk8sys         ;
+; ymfEn        ; clk8sys    ;        ; 9.500  ; Fall       ; clk8sys         ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------+
+; Propagation Delay                                             ;
++-------------+-------------+--------+--------+--------+--------+
+; Input Port  ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++-------------+-------------+--------+--------+--------+--------+
+; adrBusHi[0] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[0] ; ioEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[0] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[0] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[0] ; v0En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[0] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[0] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; ioEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; v0En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; ioEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; v0En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; ioEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; v0En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; ioEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; v0En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[5] ; adrBanks[0] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[1] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[2] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[3] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[4] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[5] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[6] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[7] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; datDD       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[5] ; hr0En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[5] ; hr1En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[5] ; hr2En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[5] ; hr3En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[5] ; ioEn        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[5] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[5] ; srlEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[5] ; v0En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[5] ; v1En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[5] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; adrBanks[0] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[1] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[2] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[3] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[4] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[5] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[6] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[7] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; datDD       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; hr0En       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; hr1En       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; hr2En       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; hr3En       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; ioEn        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[6] ; roEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[6] ; srlEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; v0En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; v1En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[7] ; adrBanks[0] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[1] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[2] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[3] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[4] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[5] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[6] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[7] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; hr0En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; hr1En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; hr2En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; hr3En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; ioEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; roEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; v0En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[1] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[2] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[3] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[4] ; srlEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[4] ; v0En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[4] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[4] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[5] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[5] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[5] ; v0En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[5] ; v1En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[5] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[6] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[6] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[6] ; v0En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[6] ; v1En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[6] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[7] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[7] ; srlEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[7] ; v0En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[7] ; v1En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[7] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; oe          ; adrBanks[0] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[1] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[2] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[3] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[4] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[5] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[6] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[7] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; clkWr       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; datDD       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; hr0En       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; hr1En       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; hr2En       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; hr3En       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; ioEn        ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; oeLow       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; raEn        ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; roEn        ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; srlEn       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; v0En        ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; v1En        ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; ymfEn       ; 8.500  ;        ;        ; 8.500  ;
+; rw          ; clkWr       ;        ; 10.000 ; 10.000 ;        ;
+; rw          ; oeLow       ;        ; 10.000 ; 10.000 ;        ;
++-------------+-------------+--------+--------+--------+--------+
+
+
++---------------------------------------------------------------+
+; Minimum Propagation Delay                                     ;
++-------------+-------------+--------+--------+--------+--------+
+; Input Port  ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++-------------+-------------+--------+--------+--------+--------+
+; adrBusHi[0] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[0] ; ioEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[0] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[0] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[0] ; v0En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[0] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[0] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; ioEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; v0En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[1] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; ioEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; v0En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[2] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; ioEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; v0En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[3] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; ioEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; v0En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[4] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[5] ; adrBanks[0] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[1] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[2] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[3] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[4] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[5] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[6] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; adrBanks[7] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[5] ; datDD       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[5] ; hr0En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[5] ; hr1En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[5] ; hr2En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[5] ; hr3En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[5] ; ioEn        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[5] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[5] ; srlEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[5] ; v0En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[5] ; v1En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[5] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; adrBanks[0] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[1] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[2] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[3] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[4] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[5] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[6] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; adrBanks[7] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[6] ; datDD       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; hr0En       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; hr1En       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; hr2En       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; hr3En       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; ioEn        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[6] ; roEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[6] ; srlEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; v0En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; v1En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[6] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusHi[7] ; adrBanks[0] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[1] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[2] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[3] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[4] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[5] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[6] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; adrBanks[7] ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; adrBusHi[7] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; hr0En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; hr1En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; hr2En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; hr3En       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; ioEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; raEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; roEn        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; v0En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusHi[7] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[1] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[2] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[3] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[4] ; srlEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[4] ; v0En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[4] ; v1En        ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[4] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[5] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[5] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[5] ; v0En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[5] ; v1En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[5] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[6] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[6] ; srlEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[6] ; v0En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[6] ; v1En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[6] ; ymfEn       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[7] ; datDD       ; 10.000 ;        ;        ; 10.000 ;
+; adrBusLo[7] ; srlEn       ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[7] ; v0En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[7] ; v1En        ;        ; 10.000 ; 10.000 ;        ;
+; adrBusLo[7] ; ymfEn       ;        ; 10.000 ; 10.000 ;        ;
+; oe          ; adrBanks[0] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[1] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[2] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[3] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[4] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[5] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[6] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; adrBanks[7] ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; clkWr       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; datDD       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; hr0En       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; hr1En       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; hr2En       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; hr3En       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; ioEn        ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; oeLow       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; raEn        ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; roEn        ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; srlEn       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; v0En        ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; v1En        ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; ymfEn       ; 8.500  ;        ;        ; 8.500  ;
+; rw          ; clkWr       ;        ; 10.000 ; 10.000 ;        ;
+; rw          ; oeLow       ;        ; 10.000 ; 10.000 ;        ;
++-------------+-------------+--------+--------+--------+--------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 11       ; 0        ; 0        ; 0        ;
+; clk8sys    ; clk      ; 4        ; 4        ; 0        ; 0        ;
+; clk8sys    ; clk8sys  ; 0        ; 0        ; 0        ; 64       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 11       ; 0        ; 0        ; 0        ;
+; clk8sys    ; clk      ; 4        ; 4        ; 0        ; 0        ;
+; clk8sys    ; clk8sys  ; 0        ; 0        ; 0        ; 64       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 27    ; 27   ;
+; Unconstrained Input Port Paths  ; 474   ; 474  ;
+; Unconstrained Output Ports      ; 24    ; 24   ;
+; Unconstrained Output Port Paths ; 168   ; 168  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Jul 23 02:49:07 2022
+Info: Command: quartus_sta JB6502ATF1508PLCC -c JB6502ATF1508PLCC
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (306004): Started post-fitting delay annotation
+Info (306005): Delay annotation completed successfully
+Warning (335095): TimeQuest Timing Analyzer does not support the analysis of latches as synchronous elements for the currently selected device family.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'JB6502ATF1508PLCC.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name clk8sys clk8sys
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -9.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -9.000      -144.000 clk8sys 
+    Info (332119):    -9.000       -36.000 clk 
+Info (332146): Worst-case hold slack is 1.500
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.500         0.000 clk 
+    Info (332119):     5.000         0.000 clk8sys 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.500
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.500      -112.000 clk8sys 
+    Info (332119):    -3.500       -28.000 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4504 megabytes
+    Info: Processing ended: Sat Jul 23 02:49:07 2022
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -2314,25 +2314,25 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2588-8-bit-avr-microc
 	1    6600 10000
 	1    0    0    -1  
 $EndComp
-Text GLabel 7300 10100 2    50   Input ~ 0
+Text GLabel 7350 10100 2    50   Input ~ 0
 SDA
-Text GLabel 7300 10300 2    50   Input ~ 0
+Text GLabel 7350 10300 2    50   Input ~ 0
 SCL
-Text GLabel 7300 10500 2    50   Input ~ 0
+Text GLabel 7350 10500 2    50   Input ~ 0
 KBCLK
-Text GLabel 7300 10400 2    50   Input ~ 0
+Text GLabel 7350 10400 2    50   Input ~ 0
 KBDAT
-Text GLabel 7300 10600 2    50   Input ~ 0
+Text GLabel 7350 10600 2    50   Input ~ 0
 MSDAT
-Text GLabel 7300 10700 2    50   Input ~ 0
+Text GLabel 7350 10700 2    50   Input ~ 0
 MSCLK
 Text GLabel 7300 9200 2    50   Input ~ 0
 RST
 Text GLabel 7900 9300 2    50   Input ~ 0
 NMI
-Text GLabel 7300 9400 2    50   Input ~ 0
+Text GLabel 7350 9400 2    50   Input ~ 0
 RSTBTN
-Text GLabel 7300 9600 2    50   Input ~ 0
+Text GLabel 7350 9600 2    50   Input ~ 0
 PWRBTN
 $Comp
 L power:GND #PWR?
@@ -2349,7 +2349,7 @@ F 3 "" H 6700 11100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6600 11100 6700 11100
-Text GLabel 7300 10200 2    50   Input ~ 0
+Text GLabel 7350 10200 2    50   Input ~ 0
 ACTLED
 Text GLabel 7900 9900 2    50   Input ~ 0
 IRQ
@@ -2383,7 +2383,7 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7750 
 $EndComp
 Wire Wire Line
 	7600 9900 7300 9900
-Text GLabel 7300 9700 2    50   Input ~ 0
+Text GLabel 7350 9700 2    50   Input ~ 0
 PWRON
 NoConn ~ 10150 5450
 $Comp
@@ -2428,7 +2428,7 @@ F 3 " ~" H 2425 9250 50  0001 C CNN
 	1    3700 9800
 	1    0    0    -1  
 $EndComp
-Text GLabel 7300 10800 2    50   Input ~ 0
+Text GLabel 7350 10800 2    50   Input ~ 0
 TNYRST
 Text GLabel 4100 9900 2    50   Input ~ 0
 TNYRST
@@ -2438,7 +2438,7 @@ Text GLabel 4100 9600 2    50   Input ~ 0
 ACTLED
 Text GLabel 4100 9800 2    50   Input ~ 0
 SCL
-Text GLabel 7300 9800 2    50   Input ~ 0
+Text GLabel 7350 9800 2    50   Input ~ 0
 PWROK
 $Comp
 L Mechanical:MountingHole H?
@@ -3001,7 +3001,7 @@ F 3 "" H 5550 10100 50  0001 C CNN
 	1    5550 10100
 	0    -1   -1   0   
 $EndComp
-Text GLabel 7300 9500 2    50   Input ~ 0
+Text GLabel 7350 9500 2    50   Input ~ 0
 NMIBTN
 $Comp
 L power:GND #PWR?

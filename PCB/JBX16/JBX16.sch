@@ -4002,7 +4002,7 @@ Text GLabel 13700 11650 0    50   Input ~ 0
 RST
 Text GLabel 8350 6100 0    50   Input ~ 0
 ADRDD
-Text GLabel 3650 5500 2    50   Input ~ 0
+Text GLabel 3400 5150 2    50   Input ~ 0
 YMFEN
 $Comp
 L Device:C C?
