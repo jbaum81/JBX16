@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for VeraCPLD
-Fri Jul 08 17:55:14 2022
+Sat Jul 30 10:06:05 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -117,42 +117,68 @@ No paths to report.
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
 ; adr[0]     ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[0]     ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[0]     ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[0]     ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[0]     ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; adr[1]     ; datDD       ;       ; 7.500 ; 7.500 ;       ;
+; adr[1]     ; rLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[1]     ; rdB         ;       ; 7.500 ; 7.500 ;       ;
+; adr[1]     ; wLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[1]     ; wrB         ;       ; 7.500 ; 7.500 ;       ;
 ; adr[2]     ; datDD       ;       ; 7.500 ; 7.500 ;       ;
+; adr[2]     ; rLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[2]     ; rdB         ;       ; 7.500 ; 7.500 ;       ;
+; adr[2]     ; wLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[2]     ; wrB         ;       ; 7.500 ; 7.500 ;       ;
 ; adr[3]     ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[3]     ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[3]     ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[3]     ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[3]     ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; adr[4]     ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[4]     ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[4]     ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[4]     ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[4]     ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; adr[5]     ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[5]     ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[5]     ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[5]     ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[5]     ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; adr[6]     ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[6]     ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[6]     ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[6]     ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[6]     ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; adr[7]     ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[7]     ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[7]     ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[7]     ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[7]     ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; adr[8]     ; datDD       ;       ; 7.500 ; 7.500 ;       ;
+; adr[8]     ; rLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[8]     ; rdB         ;       ; 7.500 ; 7.500 ;       ;
+; adr[8]     ; wLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[8]     ; wrB         ;       ; 7.500 ; 7.500 ;       ;
 ; adr[9]     ; datDD       ;       ; 7.500 ; 7.500 ;       ;
+; adr[9]     ; rLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[9]     ; rdB         ;       ; 7.500 ; 7.500 ;       ;
+; adr[9]     ; wLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[9]     ; wrB         ;       ; 7.500 ; 7.500 ;       ;
 ; adr[10]    ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[10]    ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[10]    ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[10]    ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[10]    ; wrB         ; 7.500 ;       ;       ; 7.500 ;
+; clk        ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; clk        ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; clk        ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; clk        ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; rw         ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; rw         ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; rw         ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; rw         ; wLED        ;       ; 7.500 ; 7.500 ;       ;
 ; rw         ; wrB         ;       ; 7.500 ; 7.500 ;       ;
 +------------+-------------+-------+-------+-------+-------+
 
@@ -163,42 +189,68 @@ No paths to report.
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
 ; adr[0]     ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[0]     ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[0]     ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[0]     ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[0]     ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; adr[1]     ; datDD       ;       ; 7.500 ; 7.500 ;       ;
+; adr[1]     ; rLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[1]     ; rdB         ;       ; 7.500 ; 7.500 ;       ;
+; adr[1]     ; wLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[1]     ; wrB         ;       ; 7.500 ; 7.500 ;       ;
 ; adr[2]     ; datDD       ;       ; 7.500 ; 7.500 ;       ;
+; adr[2]     ; rLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[2]     ; rdB         ;       ; 7.500 ; 7.500 ;       ;
+; adr[2]     ; wLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[2]     ; wrB         ;       ; 7.500 ; 7.500 ;       ;
 ; adr[3]     ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[3]     ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[3]     ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[3]     ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[3]     ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; adr[4]     ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[4]     ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[4]     ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[4]     ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[4]     ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; adr[5]     ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[5]     ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[5]     ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[5]     ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[5]     ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; adr[6]     ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[6]     ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[6]     ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[6]     ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[6]     ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; adr[7]     ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[7]     ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[7]     ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[7]     ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[7]     ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; adr[8]     ; datDD       ;       ; 7.500 ; 7.500 ;       ;
+; adr[8]     ; rLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[8]     ; rdB         ;       ; 7.500 ; 7.500 ;       ;
+; adr[8]     ; wLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[8]     ; wrB         ;       ; 7.500 ; 7.500 ;       ;
 ; adr[9]     ; datDD       ;       ; 7.500 ; 7.500 ;       ;
+; adr[9]     ; rLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[9]     ; rdB         ;       ; 7.500 ; 7.500 ;       ;
+; adr[9]     ; wLED        ;       ; 7.500 ; 7.500 ;       ;
 ; adr[9]     ; wrB         ;       ; 7.500 ; 7.500 ;       ;
 ; adr[10]    ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; adr[10]    ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[10]    ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; adr[10]    ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; adr[10]    ; wrB         ; 7.500 ;       ;       ; 7.500 ;
+; clk        ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; clk        ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; clk        ; wLED        ; 7.500 ;       ;       ; 7.500 ;
 ; clk        ; wrB         ; 7.500 ;       ;       ; 7.500 ;
 ; rw         ; datDD       ; 7.500 ;       ;       ; 7.500 ;
+; rw         ; rLED        ; 7.500 ;       ;       ; 7.500 ;
 ; rw         ; rdB         ; 7.500 ;       ;       ; 7.500 ;
+; rw         ; wLED        ;       ; 7.500 ; 7.500 ;       ;
 ; rw         ; wrB         ;       ; 7.500 ; 7.500 ;       ;
 +------------+-------------+-------+-------+-------+-------+
 
@@ -229,9 +281,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 13    ; 13   ;
-; Unconstrained Input Port Paths  ; 38    ; 38   ;
-; Unconstrained Output Ports      ; 3     ; 3    ;
-; Unconstrained Output Port Paths ; 38    ; 38   ;
+; Unconstrained Input Port Paths  ; 64    ; 64   ;
+; Unconstrained Output Ports      ; 5     ; 5    ;
+; Unconstrained Output Port Paths ; 64    ; 64   ;
 +---------------------------------+-------+------+
 
 
@@ -241,7 +293,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jul 08 17:55:13 2022
+    Info: Processing started: Sat Jul 30 10:06:05 2022
 Info: Command: quartus_sta VeraCPLD -c VeraCPLD
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -265,8 +317,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4504 megabytes
-    Info: Processing ended: Fri Jul 08 17:55:14 2022
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sat Jul 30 10:06:05 2022
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

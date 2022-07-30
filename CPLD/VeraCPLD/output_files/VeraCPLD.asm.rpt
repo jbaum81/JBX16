@@ -1,5 +1,5 @@
 Assembler report for VeraCPLD
-Fri Jul 08 17:55:12 2022
+Sat Jul 30 10:06:04 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/_Dev/cpld/VeraCPLD/output_files/VeraCPLD.pof
+  5. Assembler Device Options: D:/_Dev/X16/JBX16/CPLD/VeraCPLD/output_files/VeraCPLD.pof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Jul 08 17:55:12 2022 ;
+; Assembler Status      ; Successful - Sat Jul 30 10:06:04 2022 ;
 ; Revision Name         ; VeraCPLD                              ;
 ; Top-level Entity Name ; VeraCPLD                              ;
 ; Family                ; MAX7000S                              ;
@@ -73,24 +73,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+-------------------------------------------------+
-; Assembler Generated Files                       ;
-+-------------------------------------------------+
-; File Name                                       ;
-+-------------------------------------------------+
-; D:/_Dev/cpld/VeraCPLD/output_files/VeraCPLD.pof ;
-+-------------------------------------------------+
++-----------------------------------------------------------+
+; Assembler Generated Files                                 ;
++-----------------------------------------------------------+
+; File Name                                                 ;
++-----------------------------------------------------------+
+; D:/_Dev/X16/JBX16/CPLD/VeraCPLD/output_files/VeraCPLD.pof ;
++-----------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Assembler Device Options: D:/_Dev/cpld/VeraCPLD/output_files/VeraCPLD.pof ;
-+----------------+----------------------------------------------------------+
-; Option         ; Setting                                                  ;
-+----------------+----------------------------------------------------------+
-; Device         ; EPM7032STC44-7                                           ;
-; JTAG usercode  ; 0x00000000                                               ;
-; Checksum       ; 0x0006E959                                               ;
-+----------------+----------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/_Dev/X16/JBX16/CPLD/VeraCPLD/output_files/VeraCPLD.pof ;
++----------------+--------------------------------------------------------------------+
+; Option         ; Setting                                                            ;
++----------------+--------------------------------------------------------------------+
+; Device         ; EPM7032STC44-7                                                     ;
+; JTAG usercode  ; 0x00000000                                                         ;
+; Checksum       ; 0x0006B901                                                         ;
++----------------+--------------------------------------------------------------------+
 
 
 +--------------------+
@@ -99,12 +99,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jul 08 17:55:12 2022
+    Info: Processing started: Sat Jul 30 10:06:04 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off VeraCPLD -c VeraCPLD
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4511 megabytes
-    Info: Processing ended: Fri Jul 08 17:55:12 2022
+    Info: Processing ended: Sat Jul 30 10:06:04 2022
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

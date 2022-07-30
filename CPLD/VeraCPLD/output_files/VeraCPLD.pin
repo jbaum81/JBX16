@@ -90,12 +90,12 @@ TCK                          : 26        : input  : TTL               :         
 RESERVED                     : 27        :        :                   :         :           :                
 RESERVED                     : 28        :        :                   :         :           :                
 VCC                          : 29        : power  :                   :         :           :                
-RESERVED                     : 30        :        :                   :         :           :                
+rLED                         : 30        : output : TTL               :         :           : Y              
 datDD                        : 31        : output : TTL               :         :           : Y              
 TDO                          : 32        : output : TTL               :         :           : N              
 rdB                          : 33        : output : TTL               :         :           : Y              
 wrB                          : 34        : output : TTL               :         :           : Y              
-RESERVED                     : 35        :        :                   :         :           :                
+wLED                         : 35        : output : TTL               :         :           : Y              
 GND                          : 36        : gnd    :                   :         :           :                
 clk                          : 37        : input  : TTL               :         :           : Y              
 GND+                         : 38        :        :                   :         :           :                

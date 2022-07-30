@@ -67,3 +67,5 @@ set_location_assignment PIN_31 -to datDD
 set_location_assignment PIN_33 -to rdB
 set_location_assignment PIN_42 -to rw
 set_location_assignment PIN_34 -to wrB
+set_location_assignment PIN_30 -to rLED
+set_location_assignment PIN_35 -to wLED

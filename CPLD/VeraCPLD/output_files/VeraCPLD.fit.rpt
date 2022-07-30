@@ -1,5 +1,5 @@
 Fitter report for VeraCPLD
-Fri Jul 08 17:55:11 2022
+Sat Jul 30 10:06:03 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -50,15 +50,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Fitter Summary                                                              ;
 +---------------------------+-------------------------------------------------+
-; Fitter Status             ; Successful - Fri Jul 08 17:55:11 2022           ;
+; Fitter Status             ; Successful - Sat Jul 30 10:06:03 2022           ;
 ; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name             ; VeraCPLD                                        ;
 ; Top-level Entity Name     ; VeraCPLD                                        ;
 ; Family                    ; MAX7000S                                        ;
 ; Device                    ; EPM7032STC44-7                                  ;
 ; Timing Models             ; Final                                           ;
-; Total macrocells          ; 3 / 32 ( 9 % )                                  ;
-; Total pins                ; 20 / 36 ( 56 % )                                ;
+; Total macrocells          ; 5 / 32 ( 16 % )                                 ;
+; Total pins                ; 22 / 36 ( 61 % )                                ;
 +---------------------------+-------------------------------------------------+
 
 
@@ -96,7 +96,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/_Dev/cpld/VeraCPLD/output_files/VeraCPLD.pin.
+The pin-out file can be found in D:/_Dev/X16/JBX16/CPLD/VeraCPLD/output_files/VeraCPLD.pin.
 
 
 +-------------------------------------------------+
@@ -104,21 +104,21 @@ The pin-out file can be found in D:/_Dev/cpld/VeraCPLD/output_files/VeraCPLD.pin
 +------------------------------+------------------+
 ; Resource                     ; Usage            ;
 +------------------------------+------------------+
-; Logic cells                  ; 3 / 32 ( 9 % )   ;
+; Logic cells                  ; 5 / 32 ( 16 % )  ;
 ; Registers                    ; 0 / 32 ( 0 % )   ;
-; Number of pterms used        ; 3                ;
-; I/O pins                     ; 20 / 36 ( 56 % ) ;
+; Number of pterms used        ; 5                ;
+; I/O pins                     ; 22 / 36 ( 61 % ) ;
 ;     -- Clock pins            ; 1 / 2 ( 50 % )   ;
 ;     -- Dedicated input pins  ; 0 / 2 ( 0 % )    ;
 ;                              ;                  ;
 ; Global signals               ; 0                ;
 ; Shareable expanders          ; 0 / 32 ( 0 % )   ;
 ; Parallel expanders           ; 0 / 30 ( 0 % )   ;
-; Cells using turbo bit        ; 3 / 32 ( 9 % )   ;
-; Maximum fan-out              ; 3                ;
-; Highest non-global fan-out   ; 3                ;
-; Total fan-out                ; 41               ;
-; Average fan-out              ; 1.78             ;
+; Cells using turbo bit        ; 5 / 32 ( 16 % )  ;
+; Maximum fan-out              ; 5                ;
+; Highest non-global fan-out   ; 5                ;
+; Total fan-out                ; 69               ;
+; Average fan-out              ; 2.56             ;
 +------------------------------+------------------+
 
 
@@ -127,19 +127,19 @@ The pin-out file can be found in D:/_Dev/cpld/VeraCPLD/output_files/VeraCPLD.pin
 +---------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
 ; Name    ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
 +---------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
-; adr[0]  ; 2     ; --       ; 1   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
-; adr[10] ; 15    ; --       ; 1   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
-; adr[1]  ; 3     ; --       ; 1   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
-; adr[2]  ; 5     ; --       ; 1   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
-; adr[3]  ; 6     ; --       ; 1   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
-; adr[4]  ; 8     ; --       ; 1   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
-; adr[5]  ; 10    ; --       ; 1   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
-; adr[6]  ; 11    ; --       ; 1   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
-; adr[7]  ; 12    ; --       ; 1   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
-; adr[8]  ; 13    ; --       ; 1   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
-; adr[9]  ; 14    ; --       ; 1   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
-; clk     ; 37    ; --       ; --  ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
-; rw      ; 42    ; --       ; 1   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adr[0]  ; 2     ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adr[10] ; 15    ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adr[1]  ; 3     ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adr[2]  ; 5     ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adr[3]  ; 6     ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adr[4]  ; 8     ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adr[5]  ; 10    ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adr[6]  ; 11    ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adr[7]  ; 12    ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adr[8]  ; 13    ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; adr[9]  ; 14    ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; clk     ; 37    ; --       ; --  ; 4                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; rw      ; 42    ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
 +---------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
 
 
@@ -149,7 +149,9 @@ The pin-out file can be found in D:/_Dev/cpld/VeraCPLD/output_files/VeraCPLD.pin
 ; Name  ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +-------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
 ; datDD ; 31    ; --       ; 2   ; no              ; no             ; yes        ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; rLED  ; 30    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
 ; rdB   ; 33    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; wLED  ; 35    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
 ; wrB   ; 34    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
 +-------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
 
@@ -188,12 +190,12 @@ The pin-out file can be found in D:/_Dev/cpld/VeraCPLD/output_files/VeraCPLD.pin
 ; 27       ; 32         ; --       ; RESERVED       ;        ;              ;         ;                 ;
 ; 28       ; 33         ; --       ; RESERVED       ;        ;              ;         ;                 ;
 ; 29       ; 34         ; --       ; VCC            ; power  ;              ;         ;                 ;
-; 30       ; 35         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 30       ; 35         ; --       ; rLED           ; output ; TTL          ;         ; Y               ;
 ; 31       ; 36         ; --       ; datDD          ; output ; TTL          ;         ; Y               ;
 ; 32       ; 37         ; --       ; TDO            ; output ; TTL          ;         ; N               ;
 ; 33       ; 38         ; --       ; rdB            ; output ; TTL          ;         ; Y               ;
 ; 34       ; 39         ; --       ; wrB            ; output ; TTL          ;         ; Y               ;
-; 35       ; 40         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 35       ; 40         ; --       ; wLED           ; output ; TTL          ;         ; Y               ;
 ; 36       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
 ; 37       ; 42         ; --       ; clk            ; input  ; TTL          ;         ; Y               ;
 ; 38       ; 43         ; --       ; GND+           ;        ;              ;         ;                 ;
@@ -240,7 +242,7 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+------------+------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+------------+------+---------------------+--------------+
-; |VeraCPLD                  ; 3          ; 20   ; |VeraCPLD           ; work         ;
+; |VeraCPLD                  ; 5          ; 22   ; |VeraCPLD           ; work         ;
 +----------------------------+------------+------+---------------------+--------------+
 
 
@@ -249,22 +251,24 @@ Note: User assignments will override these defaults. The user specified values a
 +---------+-----------------------+
 ; Name    ; Fan-Out               ;
 +---------+-----------------------+
-; adr[10] ; 3                     ;
-; adr[9]  ; 3                     ;
-; adr[8]  ; 3                     ;
-; adr[7]  ; 3                     ;
-; adr[6]  ; 3                     ;
-; adr[5]  ; 3                     ;
-; adr[4]  ; 3                     ;
-; adr[3]  ; 3                     ;
-; adr[2]  ; 3                     ;
-; adr[1]  ; 3                     ;
-; adr[0]  ; 3                     ;
-; rw      ; 3                     ;
-; clk     ; 2                     ;
-; rdB~7   ; 1                     ;
-; wrB~2   ; 1                     ;
-; rdB~4   ; 1                     ;
+; adr[10] ; 5                     ;
+; adr[9]  ; 5                     ;
+; adr[8]  ; 5                     ;
+; adr[7]  ; 5                     ;
+; adr[6]  ; 5                     ;
+; adr[5]  ; 5                     ;
+; adr[4]  ; 5                     ;
+; adr[3]  ; 5                     ;
+; adr[2]  ; 5                     ;
+; adr[1]  ; 5                     ;
+; adr[0]  ; 5                     ;
+; rw      ; 5                     ;
+; clk     ; 4                     ;
+; rdB~12  ; 1                     ;
+; wrB~7   ; 1                     ;
+; rdB~9   ; 1                     ;
+; wrB~4   ; 1                     ;
+; rdB~6   ; 1                     ;
 +---------+-----------------------+
 
 
@@ -281,12 +285,14 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------------------------------------------------+
 ; LAB Macrocells                                                       ;
 +----------------------------------------+-----------------------------+
-; Number of Macrocells  (Average = 1.50) ; Number of LABs  (Total = 1) ;
+; Number of Macrocells  (Average = 2.50) ; Number of LABs  (Total = 1) ;
 +----------------------------------------+-----------------------------+
 ; 0                                      ; 1                           ;
 ; 1                                      ; 0                           ;
 ; 2                                      ; 0                           ;
-; 3                                      ; 1                           ;
+; 3                                      ; 0                           ;
+; 4                                      ; 0                           ;
+; 5                                      ; 1                           ;
 +----------------------------------------+-----------------------------+
 
 
@@ -298,6 +304,8 @@ Note: User assignments will override these defaults. The user specified values a
 ;  B  ; LC21       ; rw, adr[0], adr[1], adr[2], adr[3], adr[4], adr[5], adr[6], adr[7], adr[8], adr[9], adr[10]      ; datDD  ;
 ;  B  ; LC18       ; clk, rw, adr[0], adr[1], adr[2], adr[3], adr[4], adr[5], adr[6], adr[7], adr[8], adr[9], adr[10] ; wrB    ;
 ;  B  ; LC19       ; rw, adr[0], adr[1], adr[2], adr[3], adr[4], adr[5], adr[6], adr[7], adr[8], adr[9], adr[10], clk ; rdB    ;
+;  B  ; LC17       ; clk, rw, adr[0], adr[1], adr[2], adr[3], adr[4], adr[5], adr[6], adr[7], adr[8], adr[9], adr[10] ; wLED   ;
+;  B  ; LC22       ; rw, adr[0], adr[1], adr[2], adr[3], adr[4], adr[5], adr[6], adr[7], adr[8], adr[9], adr[10], clk ; rLED   ;
 +-----+------------+--------------------------------------------------------------------------------------------------+--------+
 
 
@@ -323,7 +331,7 @@ Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119006): Selected device EPM7032STC44-7 for design "VeraCPLD"
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4675 megabytes
-    Info: Processing ended: Fri Jul 08 17:55:11 2022
+    Info: Processing ended: Sat Jul 30 10:06:03 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
