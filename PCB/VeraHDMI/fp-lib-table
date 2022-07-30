@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name vera-module)(type KiCad)(uri D:/_Dev/X16/JBX16/PCB/VeraHDMI/vera-module.pretty)(options "")(descr ""))
+)
