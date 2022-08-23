@@ -57,7 +57,7 @@
  ---------------------------------------------------------------------------------
 
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-CHIP  "JB6502ATF1508PLCC"  ASSIGNED TO AN: EPM7064SLC84-10
+CHIP  "JB6502ATF1508PLCC"  ASSIGNED TO AN: EPM7128SLC84-10
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
@@ -81,7 +81,7 @@ hr0En                        : 17        : output : TTL               :         
 hr1En                        : 18        : output : TTL               :         :           : Y              
 GND                          : 19        : gnd    :                   :         :           :                
 hr2En                        : 20        : output : TTL               :         :           : Y              
-datDD                        : 21        : output : TTL               :         :           : Y              
+datDD                        : 21        : bidir  : TTL               :         :           : Y              
 clkWr                        : 22        : output : TTL               :         :           : Y              
 TMS                          : 23        : input  : TTL               :         :           : Y              
 datBus[2]                    : 24        : input  : TTL               :         :           : Y              
@@ -140,7 +140,7 @@ RESERVED                     : 76        :        :                   :         
 ymfEn                        : 77        : output : TTL               :         :           : Y              
 VCCIO                        : 78        : power  :                   : 5.0V    :           :                
 RESERVED                     : 79        :        :                   :         :           :                
-RESERVED                     : 80        :        :                   :         :           :                
+activity                     : 80        : output : TTL               :         :           : Y              
 RESERVED                     : 81        :        :                   :         :           :                
 GND                          : 82        : gnd    :                   :         :           :                
 clk                          : 83        : input  : TTL               :         :           : Y              

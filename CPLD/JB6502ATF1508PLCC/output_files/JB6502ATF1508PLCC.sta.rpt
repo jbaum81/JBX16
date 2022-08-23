@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for JB6502ATF1508PLCC
-Sat Jul 23 02:49:07 2022
+Mon Aug 22 23:38:06 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 ; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
 ; Revision Name      ; JB6502ATF1508PLCC                                                 ;
 ; Device Family      ; MAX7000S                                                          ;
-; Device Name        ; EPM7064SLC84-10                                                   ;
+; Device Name        ; EPM7128SLC84-10                                                   ;
 ; Timing Models      ; Final                                                             ;
 ; Delay Model        ; Slow Model                                                        ;
 ; Rise/Fall Delays   ; Unavailable                                                       ;
@@ -448,6 +448,7 @@ No paths to report.
 +--------------+------------+--------+--------+------------+-----------------+
 ; viaClk       ; clk        ; 5.000  ; 5.000  ; Rise       ; clk             ;
 ; clkWr        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
+; datDD        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
 ; sysClk       ; clk8sys    ; 1.500  ;        ; Rise       ; clk8sys         ;
 ; ymfEn        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
 ; adrBanks[*]  ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
@@ -460,6 +461,7 @@ No paths to report.
 ;  adrBanks[6] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
 ;  adrBanks[7] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
 ; clkWr        ; clk8sys    ;        ; 9.500  ; Fall       ; clk8sys         ;
+; datDD        ; clk8sys    ;        ; 9.500  ; Fall       ; clk8sys         ;
 ; hr0En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
 ; hr1En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
 ; hr2En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
@@ -476,6 +478,7 @@ No paths to report.
 +--------------+------------+--------+--------+------------+-----------------+
 ; viaClk       ; clk        ; 5.000  ; 5.000  ; Rise       ; clk             ;
 ; clkWr        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
+; datDD        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
 ; sysClk       ; clk8sys    ; 1.500  ;        ; Rise       ; clk8sys         ;
 ; ymfEn        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
 ; adrBanks[*]  ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
@@ -488,6 +491,7 @@ No paths to report.
 ;  adrBanks[6] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
 ;  adrBanks[7] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
 ; clkWr        ; clk8sys    ;        ; 9.500  ; Fall       ; clk8sys         ;
+; datDD        ; clk8sys    ;        ; 9.500  ; Fall       ; clk8sys         ;
 ; hr0En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
 ; hr1En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
 ; hr2En        ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
@@ -627,7 +631,7 @@ No paths to report.
 ; oe          ; adrBanks[6] ; 8.500  ;        ;        ; 8.500  ;
 ; oe          ; adrBanks[7] ; 8.500  ;        ;        ; 8.500  ;
 ; oe          ; clkWr       ; 8.500  ;        ;        ; 8.500  ;
-; oe          ; datDD       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; datDD       ; 10.000 ;        ;        ; 10.000 ;
 ; oe          ; hr0En       ; 8.500  ;        ;        ; 8.500  ;
 ; oe          ; hr1En       ; 8.500  ;        ;        ; 8.500  ;
 ; oe          ; hr2En       ; 8.500  ;        ;        ; 8.500  ;
@@ -641,6 +645,7 @@ No paths to report.
 ; oe          ; v1En        ; 8.500  ;        ;        ; 8.500  ;
 ; oe          ; ymfEn       ; 8.500  ;        ;        ; 8.500  ;
 ; rw          ; clkWr       ;        ; 10.000 ; 10.000 ;        ;
+; rw          ; datDD       ; 10.000 ;        ;        ; 10.000 ;
 ; rw          ; oeLow       ;        ; 10.000 ; 10.000 ;        ;
 +-------------+-------------+--------+--------+--------+--------+
 
@@ -775,7 +780,7 @@ No paths to report.
 ; oe          ; adrBanks[6] ; 8.500  ;        ;        ; 8.500  ;
 ; oe          ; adrBanks[7] ; 8.500  ;        ;        ; 8.500  ;
 ; oe          ; clkWr       ; 8.500  ;        ;        ; 8.500  ;
-; oe          ; datDD       ; 8.500  ;        ;        ; 8.500  ;
+; oe          ; datDD       ; 10.000 ;        ;        ; 10.000 ;
 ; oe          ; hr0En       ; 8.500  ;        ;        ; 8.500  ;
 ; oe          ; hr1En       ; 8.500  ;        ;        ; 8.500  ;
 ; oe          ; hr2En       ; 8.500  ;        ;        ; 8.500  ;
@@ -789,6 +794,7 @@ No paths to report.
 ; oe          ; v1En        ; 8.500  ;        ;        ; 8.500  ;
 ; oe          ; ymfEn       ; 8.500  ;        ;        ; 8.500  ;
 ; rw          ; clkWr       ;        ; 10.000 ; 10.000 ;        ;
+; rw          ; datDD       ; 10.000 ;        ;        ; 10.000 ;
 ; rw          ; oeLow       ;        ; 10.000 ; 10.000 ;        ;
 +-------------+-------------+--------+--------+--------+--------+
 
@@ -837,9 +843,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 27    ; 27   ;
-; Unconstrained Input Port Paths  ; 474   ; 474  ;
+; Unconstrained Input Port Paths  ; 475   ; 475  ;
 ; Unconstrained Output Ports      ; 24    ; 24   ;
-; Unconstrained Output Port Paths ; 168   ; 168  ;
+; Unconstrained Output Port Paths ; 170   ; 170  ;
 +---------------------------------+-------+------+
 
 
@@ -849,7 +855,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Jul 23 02:49:07 2022
+    Info: Processing started: Mon Aug 22 23:38:05 2022
 Info: Command: quartus_sta JB6502ATF1508PLCC -c JB6502ATF1508PLCC
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -885,8 +891,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4504 megabytes
-    Info: Processing ended: Sat Jul 23 02:49:07 2022
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Mon Aug 22 23:38:06 2022
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

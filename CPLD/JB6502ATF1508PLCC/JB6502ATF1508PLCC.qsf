@@ -37,7 +37,7 @@
 
 
 set_global_assignment -name FAMILY MAX7000S
-set_global_assignment -name DEVICE "EPM7064SLC84-10"
+set_global_assignment -name DEVICE "EPM7128SLC84-10"
 set_global_assignment -name TOP_LEVEL_ENTITY JB6502ATF1508PLCC
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:21:08  MAY 06, 2022"
@@ -104,3 +104,4 @@ set_location_assignment PIN_4 -to adrBanks[7]
 set_location_assignment PIN_70 -to sysClk
 set_location_assignment PIN_69 -to viaClk
 set_location_assignment PIN_77 -to ymfEn
+set_location_assignment PIN_80 -to activity
