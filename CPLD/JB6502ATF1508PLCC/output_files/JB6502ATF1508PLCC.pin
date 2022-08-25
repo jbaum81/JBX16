@@ -74,7 +74,7 @@ adrBanks[2]                  : 10        : output : TTL               :         
 adrBanks[1]                  : 11        : output : TTL               :         :           : Y              
 adrBanks[0]                  : 12        : output : TTL               :         :           : Y              
 VCCIO                        : 13        : power  :                   : 5.0V    :           :                
-TDI                          : 14        : input  : TTL               :         :           : Y              
+TDI                          : 14        : input  : TTL               :         :           : N              
 datBus[0]                    : 15        : input  : TTL               :         :           : Y              
 datBus[1]                    : 16        : input  : TTL               :         :           : Y              
 hr0En                        : 17        : output : TTL               :         :           : Y              
@@ -83,7 +83,7 @@ GND                          : 19        : gnd    :                   :         
 hr2En                        : 20        : output : TTL               :         :           : Y              
 datDD                        : 21        : bidir  : TTL               :         :           : Y              
 clkWr                        : 22        : output : TTL               :         :           : Y              
-TMS                          : 23        : input  : TTL               :         :           : Y              
+TMS                          : 23        : input  : TTL               :         :           : N              
 datBus[2]                    : 24        : input  : TTL               :         :           : Y              
 datBus[3]                    : 25        : input  : TTL               :         :           : Y              
 VCCIO                        : 26        : power  :                   : 5.0V    :           :                
@@ -122,7 +122,7 @@ RESERVED                     : 58        :        :                   :         
 GND                          : 59        : gnd    :                   :         :           :                
 RESERVED                     : 60        :        :                   :         :           :                
 RESERVED                     : 61        :        :                   :         :           :                
-TCK                          : 62        : input  : TTL               :         :           : Y              
+TCK                          : 62        : input  : TTL               :         :           : N              
 datBus[6]                    : 63        : input  : TTL               :         :           : Y              
 datBus[7]                    : 64        : input  : TTL               :         :           : Y              
 v1En                         : 65        : output : TTL               :         :           : Y              
@@ -131,7 +131,7 @@ srlEn                        : 67        : output : TTL               :         
 ioEn                         : 68        : output : TTL               :         :           : Y              
 viaClk                       : 69        : output : TTL               :         :           : Y              
 sysClk                       : 70        : output : TTL               :         :           : Y              
-TDO                          : 71        : output : TTL               :         :           : Y              
+TDO                          : 71        : output : TTL               :         :           : N              
 GND                          : 72        : gnd    :                   :         :           :                
 RESERVED                     : 73        :        :                   :         :           :                
 RESERVED                     : 74        :        :                   :         :           :                

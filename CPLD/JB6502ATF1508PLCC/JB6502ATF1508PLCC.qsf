@@ -56,10 +56,6 @@ set_location_assignment PIN_49 -to adrBusLo[4]
 set_location_assignment PIN_50 -to adrBusLo[5]
 set_location_assignment PIN_51 -to adrBusLo[6]
 set_location_assignment PIN_52 -to adrBusLo[7]
-set_location_assignment PIN_14 -to TDI
-set_location_assignment PIN_71 -to TDO
-set_location_assignment PIN_23 -to TMS
-set_location_assignment PIN_62 -to TCK
 set_location_assignment PIN_15 -to datBus[0]
 set_location_assignment PIN_16 -to datBus[1]
 set_location_assignment PIN_24 -to datBus[2]

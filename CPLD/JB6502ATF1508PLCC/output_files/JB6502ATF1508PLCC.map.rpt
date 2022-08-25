@@ -1,5 +1,5 @@
 Analysis & Synthesis report for JB6502ATF1508PLCC
-Mon Aug 22 23:38:02 2022
+Thu Aug 25 00:41:23 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,7 +14,6 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis Messages
-  9. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -40,7 +39,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Aug 22 23:38:02 2022           ;
+; Analysis & Synthesis Status ; Successful - Thu Aug 25 00:41:23 2022           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; JB6502ATF1508PLCC                               ;
 ; Top-level Entity Name       ; JB6502ATF1508PLCC                               ;
@@ -143,9 +142,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Total registers      ; 20                   ;
 ; I/O pins             ; 53                   ;
 ; Maximum fan-out node ; adrBusHi[6]          ;
-; Maximum fan-out      ; 38                   ;
-; Total fan-out        ; 571                  ;
-; Average fan-out      ; 5.95                 ;
+; Maximum fan-out      ; 39                   ;
+; Total fan-out        ; 590                  ;
+; Average fan-out      ; 6.15                 ;
 +----------------------+----------------------+
 
 
@@ -164,20 +163,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Aug 22 23:38:01 2022
+    Info: Processing started: Thu Aug 25 00:41:23 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JB6502ATF1508PLCC -c JB6502ATF1508PLCC
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file jb6502atf1508plcc.v
     Info (12023): Found entity 1: JB6502ATF1508PLCC
 Info (12127): Elaborating entity "JB6502ATF1508PLCC" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at JB6502ATF1508PLCC.v(40): truncated value with size 32 to match size of target (1)
-Warning (10034): Output port "activity" at JB6502ATF1508PLCC.v(27) has no driver
+Warning (10230): Verilog HDL assignment warning at JB6502ATF1508PLCC.v(97): truncated value with size 32 to match size of target (1)
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "ioEn" to the node "datDD" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ioEn" to the node "raEn" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "v0En" to the node "datDD" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "v1En" to the node "datDD" into an OR gate
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "activity" is stuck at GND
+    Warning (13047): Converted the fan-out from the tri-state buffer "hr0En" to the node "raEn" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "hr1En" to the node "raEn" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "hr2En" to the node "raEn" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "hr3En" to the node "raEn" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "roEn" to the node "raEn" into an OR gate
 Info (280013): Promoted pin-driven signal(s) to global signal
     Info (280014): Promoted clock signal driven by pin "clk" to global clock signal
     Info (280016): Promoted output enable signal driven by pin "oe" to global output enable signal
@@ -186,17 +187,10 @@ Info (21057): Implemented 96 device resources after synthesis - the final resour
     Info (21059): Implemented 24 output pins
     Info (21060): Implemented 1 bidirectional pins
     Info (21063): Implemented 43 macrocells
-Info (144001): Generated suppressed messages file D:/_Dev/X16/JBX16/CPLD/JB6502ATF1508PLCC/output_files/JB6502ATF1508PLCC.map.smsg
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 4555 megabytes
-    Info: Processing ended: Mon Aug 22 23:38:02 2022
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Aug 25 00:41:23 2022
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in D:/_Dev/X16/JBX16/CPLD/JB6502ATF1508PLCC/output_files/JB6502ATF1508PLCC.map.smsg.
 
 

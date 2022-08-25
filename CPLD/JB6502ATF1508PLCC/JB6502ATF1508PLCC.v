@@ -1,4 +1,4 @@
-module JB6502ATF1508PLCC(
+	module JB6502ATF1508PLCC(
 	input clk,
 	output sysClk,
 	output viaClk,
@@ -26,105 +26,90 @@ module JB6502ATF1508PLCC(
 	output activity
 	);
 	
+	reg [7:0] ramBank;
+	reg [7:0] romBank;
+	reg clk8sys; 
+	reg clk8via;
+	reg stretch; 
+	reg stretchCnt; 
+
+	initial begin
+		ramBank=8'h00;
+		romBank=8'h00;
+		clk8sys = 0;
+		clk8via = 0;
+		stretch = 0;
+		stretchCnt = 0;
+	end
+		
+	assign sysClk = clk8sys;
+	assign viaClk = clk8via;
+	assign oeLow = (oe) ? ~rw : 1'bz;
+	assign clkWr = (oe) ? ~(~rw && sysClk) : 1'bz;
+	assign datDD = (rw && clk8sys && adrBusHi == 8'h9f && v0En && v1En) ? 1'b0 : 1'bz;
+	
+	
+	wire [7:0] _adrBanks = (adrBusHi[7:5] == 3'b101) ? ramBank : ((adrBusHi[7:6] == 2'b11) ? romBank : 8'h00);
+	assign adrBanks = (oe) ? _adrBanks : 8'bzzzzzzzz;
+	
+	assign roEn = (oe) ? ~(adrBusHi[7:6] == 2'b11) : 1'bz;
+	
+	assign hr0En = (oe) ? ~(adrBusHi[7:5] == 3'b101 && ramBank[7:6] == 2'b00) : 1'bz;
+	assign hr1En = (oe) ? ~(adrBusHi[7:5] == 3'b101 && ramBank[7:6] == 2'b01) : 1'bz;
+	assign hr2En = (oe) ? ~(adrBusHi[7:5] == 3'b101 && ramBank[7:6] == 2'b10) : 1'bz;
+	assign hr3En = (oe) ? ~(adrBusHi[7:5] == 3'b101 && ramBank[7:6] == 2'b11) : 1'bz;
+
+	assign ioEn = (oe) ? ~(adrBusHi == 8'h9f && clk8sys) : 1'bz;
+	assign v0En = (oe) ? ~(adrBusHi == 8'h9f && adrBusLo[7:4] == 4'b0000) : 1'bz;
+	assign v1En = (oe) ? ~(adrBusHi == 8'h9f && adrBusLo[7:4] == 4'b0001) : 1'bz;
+	assign srlEn = (oe) ? ~(adrBusHi == 8'h9f && adrBusLo[7:4] == 4'b0110 && clk8sys) : 1'bz;
+	assign ymfEn = (oe) ? ~(adrBusHi == 8'h9f && adrBusLo[7:1] == 7'b0100000 && clk8sys) : 1'bz;
+	assign activity = (oe) ? ~(adrBusHi == 8'h9f && (adrBusLo == 8'h3e || adrBusLo == 8'h3f)) : 1'bz;
+
+	assign raEn = (oe) ? ~(roEn && hr0En && hr1En && hr2En && hr3En && ioEn && clk8sys) : 1'bz;
+
+	
+	//Ram/Rom Banking
+	always @(negedge sysClk) begin
+		if (~rst) begin
+			ramBank <= 0;
+		end
+		else begin
+			if ({adrBusHi,adrBusLo} == 16'h0000 && ~rw)
+				ramBank <= datBus;
+		end
+	end
+
+	always @(negedge sysClk) begin
+		if (~rst) begin
+			romBank <= 0;
+		end
+		else begin
+			if ({adrBusHi,adrBusLo} == 16'h0001 && ~rw) begin
+				romBank <= datBus;
+			end
+		end
+	end
 
 	//Clocking and Stretching
-	reg clk8sys = 0; 
-	assign sysClk = clk8sys;
-	reg clk8via = 0; 
-	assign viaClk = clk8via;
-	reg stretch = 0; 
-	reg stretchCnt = 0; 
-	
 	always @(posedge clk) begin 
 		clk8via <= !clk8via; 
 		stretchCnt <= stretchCnt+1; 
 		if (stretch && stretchCnt) begin
-			if(clk8sys) clk8sys <= 0;
+			if(clk8sys) begin 
+				clk8sys <= 0;
+			end
 			else begin
 				clk8sys <= 1;
-				stretch = 0;
+				stretch <= 0;
 			end
 		end else if(!stretch) begin
 			clk8sys <= !clk8sys;
-			if(!clk8sys && isYMF) begin
+			if(!clk8sys && adrBusHi == 8'h9f && adrBusLo[7:1] == 7'b0100000) begin
 				stretch <= 1;
 				stretchCnt <=0;
 			end
 		end
 	end
-	
-	wire _roEn;
-	assign _roEn = (adrBusHi[7:6] == 2'b11) ? 1'b0 : 1'b1;
-	assign roEn = (oe) ? _roEn : 1'bz;
-	
-	wire _hrEn;
-	assign _hrEn = (adrBusHi[7:5] == 3'b101) ? 1'b0 : 1'b1;
-	wire _hr0En;
-	assign _hr0En = (_raBank[7:6] == 2'b00 && ~_hrEn) ? 1'b0 : 1'b1;
-	assign hr0En = (oe) ? _hr0En : 1'bz;
-	wire _hr1En;
-	assign _hr1En = (_raBank[7:6] == 2'b01 && ~_hrEn) ? 1'b0 : 1'b1;
-	assign hr1En = (oe) ? _hr1En : 1'bz;
-	wire _hr2En;
-	assign _hr2En = (_raBank[7:6] == 2'b10 && ~_hrEn) ? 1'b0 : 1'b1;
-	assign hr2En = (oe) ? _hr2En : 1'bz;
-	wire _hr3En;
-	assign _hr3En = (_raBank[7:6] == 2'b11 && ~_hrEn) ? 1'b0 : 1'b1;
-	assign hr3En = (oe) ? _hr3En : 1'bz;
-	
-	wire _ioEn;
-	assign _ioEn = (adrBusHi == 8'b10011111) ? 1'b0 : 1'b1;
-	assign ioEn = (oe) ? _ioEn : 1'bz;
-	wire _v0En;
-	assign _v0En = (~_ioEn && adrBusLo[7:4] == 4'b0000 ) ? 1'b0 : 1'b1;
-	assign v0En = (oe) ? _v0En : 1'bz;
-	wire _v1En;
-	assign _v1En = (~_ioEn && adrBusLo[7:4] == 4'b0001 ) ? 1'b0 : 1'b1;
-	assign v1En = (oe) ? _v1En : 1'bz;
-	wire _srlEn;
-	assign _srlEn = (~_ioEn && adrBusLo[7:4] == 4'b0110 ) ? 1'b0 : 1'b1;
-	assign srlEn = (oe) ? _srlEn : 1'bz;
-	//wire _vidEn = (~_ioEn && adrBusLo[7:5] == 3'b001 ) ? 1'b0 : 1'b1;
-	assign datDD = (~ioEn && rw && sysClk && v1En && v0En) ? 1'b0 : 1'bz;
-
-	wire isYMF = (~_ioEn && adrBusLo[7:1] == 7'b0100000 ) ? 1'b1 : 1'b0;
-	wire _ymfEn = (isYMF && sysClk) ? 1'b0 : 1'b1;
-	assign ymfEn = (oe) ? _ymfEn : 1'bz;
-	
-	wire _raEn;
-	assign _raEn = (_roEn && _hrEn && _ioEn) ? 1'b0 : 1'b1;
-	assign raEn = (oe) ? _raEn : 1'bz;
-	
-	
-	wire _rLow;
-	assign _rLow = ~rw;
-	assign oeLow = (oe) ? _rLow : 1'bz;
-	
-	wire _clkWr;
-	assign _clkWr = (~rw && sysClk) ? 1'b0 : 1'b1;
-	assign clkWr = (oe) ? _clkWr : 1'bz;
-	
-	reg [7:0] _raBank = 0;
-	reg [7:0] _roBank = 0;
-	wire [7:0] _rBanks;
-	assign _rBanks = (~_hrEn) ? _raBank : _roBank;
-	assign adrBanks = (oe) ? _rBanks : 1'bz;
-	
-	always @(negedge sysClk) begin
-		if (~rst)
-			_raBank <= 0;
-		else if (adrBusHi == 0 && adrBusLo == 0 && ~rw)
-			_raBank <= datBus;
-	end
-	
-	always @(negedge sysClk) begin
-		if (~rst)
-			_roBank <= 0;
-		else if (adrBusHi == 0 && adrBusLo == 1 && ~rw)
-			_roBank <= datBus;
-	end
-
-
-	
 
 endmodule
