@@ -64,7 +64,7 @@
 	assign v1En = (oe) ? ~(adrBusHi == 8'h9f && adrBusLo[7:4] == 4'b0001) : 1'bz;
 	assign srlEn = (oe) ? ~(adrBusHi == 8'h9f && adrBusLo[7:4] == 4'b0110 && clk8sys) : 1'bz;
 	assign ymfEn = (oe) ? ~(adrBusHi == 8'h9f && adrBusLo[7:1] == 7'b0100000 && clk8sys) : 1'bz;
-	assign activity = (oe) ? ~(adrBusHi == 8'h9f && (adrBusLo == 8'h3e || adrBusLo == 8'h3f)) : 1'bz;
+	assign activity = ({adrBusHi,adrBusLo} == 16'h9f3e || {adrBusHi,adrBusLo} == 16'h9f3f) ? 1'b0 : 1'b1;
 
 	assign raEn = (oe) ? ~(roEn && hr0En && hr1En && hr2En && hr3En && ioEn && clk8sys) : 1'bz;
 

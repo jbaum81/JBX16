@@ -1,5 +1,5 @@
 Analysis & Synthesis report for JB6502ATF1508PLCC
-Thu Aug 25 00:41:23 2022
+Thu Aug 25 08:04:54 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -39,7 +39,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Aug 25 00:41:23 2022           ;
+; Analysis & Synthesis Status ; Successful - Thu Aug 25 08:04:54 2022           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; JB6502ATF1508PLCC                               ;
 ; Top-level Entity Name       ; JB6502ATF1508PLCC                               ;
@@ -143,8 +143,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins             ; 53                   ;
 ; Maximum fan-out node ; adrBusHi[6]          ;
 ; Maximum fan-out      ; 39                   ;
-; Total fan-out        ; 590                  ;
-; Average fan-out      ; 6.15                 ;
+; Total fan-out        ; 589                  ;
+; Average fan-out      ; 6.14                 ;
 +----------------------+----------------------+
 
 
@@ -163,7 +163,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Aug 25 00:41:23 2022
+    Info: Processing started: Thu Aug 25 08:04:53 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JB6502ATF1508PLCC -c JB6502ATF1508PLCC
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file jb6502atf1508plcc.v
@@ -189,8 +189,8 @@ Info (21057): Implemented 96 device resources after synthesis - the final resour
     Info (21063): Implemented 43 macrocells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 4555 megabytes
-    Info: Processing ended: Thu Aug 25 00:41:23 2022
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Thu Aug 25 08:04:54 2022
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
