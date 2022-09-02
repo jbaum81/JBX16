@@ -1,5 +1,5 @@
 Flow report for JB6502ATF1508PLCC
-Thu Aug 25 08:04:58 2022
+Thu Sep 01 17:07:56 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,14 +40,14 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +---------------------------+-------------------------------------------------+
-; Flow Status               ; Successful - Thu Aug 25 08:04:57 2022           ;
+; Flow Status               ; Successful - Thu Sep 01 17:07:55 2022           ;
 ; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name             ; JB6502ATF1508PLCC                               ;
 ; Top-level Entity Name     ; JB6502ATF1508PLCC                               ;
 ; Family                    ; MAX7000S                                        ;
 ; Device                    ; EPM7128SLC84-10                                 ;
 ; Timing Models             ; Final                                           ;
-; Total macrocells          ; 43 / 128 ( 34 % )                               ;
+; Total macrocells          ; 44 / 128 ( 34 % )                               ;
 ; Total pins                ; 57 / 68 ( 84 % )                                ;
 +---------------------------+-------------------------------------------------+
 
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/25/2022 08:04:53 ;
+; Start date & time ; 09/01/2022 17:07:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; JB6502ATF1508PLCC   ;
 +-------------------+---------------------+
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +--------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name          ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +--------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID    ; 153951938441025.166143989300324 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID    ; 153951938441025.166207727217500 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP   ; 85                              ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP   ; 0                               ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY ; output_files                    ; --            ; --          ; --         ;
@@ -82,9 +82,9 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4555 MB             ; 00:00:01                           ;
 ; Fitter                    ; 00:00:01     ; 1.0                     ; 4675 MB             ; 00:00:01                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4500 MB             ; 00:00:00                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4504 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:04     ; --                      ; --                  ; 00:00:03                           ;
+; Assembler                 ; 00:00:00     ; 1.0                     ; 4500 MB             ; 00:00:00                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4504 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:02     ; --                      ; --                  ; 00:00:03                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,7 +1,8 @@
 |JB6502ATF1508PLCC
 clk => stretch.CLK
 clk => clk8sys.CLK
-clk => stretchCnt.CLK
+clk => stretchCnt[0].CLK
+clk => stretchCnt[1].CLK
 clk => clk8via.CLK
 sysClk <= clk8sys.DB_MAX_OUTPUT_PORT_TYPE
 viaClk <= clk8via.DB_MAX_OUTPUT_PORT_TYPE

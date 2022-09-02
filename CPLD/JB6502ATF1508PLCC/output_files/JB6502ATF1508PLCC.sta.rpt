@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for JB6502ATF1508PLCC
-Thu Aug 25 08:04:58 2022
+Thu Sep 01 17:07:56 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -107,7 +107,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock   ; Slack  ; End Point TNS ;
 +---------+--------+---------------+
 ; clk8sys ; -9.000 ; -144.000      ;
-; clk     ; -9.000 ; -36.000       ;
+; clk     ; -9.000 ; -45.000       ;
 +---------+--------+---------------+
 
 
@@ -139,7 +139,7 @@ No paths to report.
 ; Clock   ; Slack  ; End Point TNS ;
 +---------+--------+---------------+
 ; clk8sys ; -3.500 ; -112.000      ;
-; clk     ; -3.500 ; -28.000       ;
+; clk     ; -3.500 ; -35.000       ;
 +---------+--------+---------------+
 
 
@@ -151,7 +151,6 @@ No paths to report.
 ; -9.000 ; ramBank[7] ; ramBank[7] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000 ; ramBank[6] ; ramBank[6] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000 ; ramBank[5] ; ramBank[5] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000 ; ramBank[4] ; ramBank[4] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000 ; romBank[0] ; romBank[0] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000 ; ramBank[0] ; ramBank[0] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000 ; romBank[1] ; romBank[1] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
@@ -164,49 +163,64 @@ No paths to report.
 ; -9.000 ; ramBank[1] ; ramBank[1] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000 ; ramBank[2] ; ramBank[2] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
 ; -9.000 ; ramBank[3] ; ramBank[3] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; ramBank[4] ; ramBank[4] ; clk8sys      ; clk8sys     ; 1.000        ; 0.000      ; 8.000      ;
 +--------+------------+------------+--------------+-------------+--------------+------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Setup: 'clk'                                                                                           ;
-+--------+------------+------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+------------+------------+--------------+-------------+--------------+------------+------------+
-; -9.000 ; clk8via    ; clk8via    ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000 ; stretchCnt ; stretchCnt ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000 ; stretch    ; stretchCnt ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000 ; stretchCnt ; clk8sys    ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000 ; stretch    ; clk8sys    ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000 ; stretch    ; stretch    ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
-; -9.000 ; stretchCnt ; stretch    ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
-; -6.000 ; clk8sys    ; stretchCnt ; clk8sys      ; clk         ; 0.500        ; 1.500      ; 8.000      ;
-; -6.000 ; clk8sys    ; clk8sys    ; clk8sys      ; clk         ; 0.500        ; 1.500      ; 8.000      ;
-; -6.000 ; clk8sys    ; stretch    ; clk8sys      ; clk         ; 0.500        ; 1.500      ; 8.000      ;
-; -5.500 ; clk8sys    ; stretchCnt ; clk8sys      ; clk         ; 1.000        ; 1.500      ; 8.000      ;
-; -5.500 ; clk8sys    ; clk8sys    ; clk8sys      ; clk         ; 1.000        ; 1.500      ; 8.000      ;
-; -5.500 ; clk8sys    ; stretch    ; clk8sys      ; clk         ; 1.000        ; 1.500      ; 8.000      ;
-+--------+------------+------------+--------------+-------------+--------------+------------+------------+
++--------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                 ;
++--------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; -9.000 ; clk8via       ; clk8via       ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretchCnt[0] ; stretchCnt[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretch       ; stretchCnt[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretch       ; stretchCnt[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretchCnt[0] ; stretchCnt[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretchCnt[1] ; stretchCnt[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretchCnt[1] ; clk8sys       ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretch       ; clk8sys       ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretchCnt[0] ; clk8sys       ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretch       ; stretch       ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretchCnt[1] ; stretch       ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -9.000 ; stretchCnt[0] ; stretch       ; clk          ; clk         ; 1.000        ; 0.000      ; 8.000      ;
+; -6.000 ; clk8sys       ; stretchCnt[0] ; clk8sys      ; clk         ; 0.500        ; 1.500      ; 8.000      ;
+; -6.000 ; clk8sys       ; stretchCnt[1] ; clk8sys      ; clk         ; 0.500        ; 1.500      ; 8.000      ;
+; -6.000 ; clk8sys       ; clk8sys       ; clk8sys      ; clk         ; 0.500        ; 1.500      ; 8.000      ;
+; -6.000 ; clk8sys       ; stretch       ; clk8sys      ; clk         ; 0.500        ; 1.500      ; 8.000      ;
+; -5.500 ; clk8sys       ; stretchCnt[0] ; clk8sys      ; clk         ; 1.000        ; 1.500      ; 8.000      ;
+; -5.500 ; clk8sys       ; stretchCnt[1] ; clk8sys      ; clk         ; 1.000        ; 1.500      ; 8.000      ;
+; -5.500 ; clk8sys       ; clk8sys       ; clk8sys      ; clk         ; 1.000        ; 1.500      ; 8.000      ;
+; -5.500 ; clk8sys       ; stretch       ; clk8sys      ; clk         ; 1.000        ; 1.500      ; 8.000      ;
++--------+---------------+---------------+--------------+-------------+--------------+------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Hold: 'clk'                                                                                           ;
-+-------+------------+------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+------------+------------+--------------+-------------+--------------+------------+------------+
-; 1.500 ; clk8sys    ; stretchCnt ; clk8sys      ; clk         ; 0.000        ; 1.500      ; 8.000      ;
-; 1.500 ; clk8sys    ; clk8sys    ; clk8sys      ; clk         ; 0.000        ; 1.500      ; 8.000      ;
-; 1.500 ; clk8sys    ; stretch    ; clk8sys      ; clk         ; 0.000        ; 1.500      ; 8.000      ;
-; 2.000 ; clk8sys    ; stretchCnt ; clk8sys      ; clk         ; -0.500       ; 1.500      ; 8.000      ;
-; 2.000 ; clk8sys    ; clk8sys    ; clk8sys      ; clk         ; -0.500       ; 1.500      ; 8.000      ;
-; 2.000 ; clk8sys    ; stretch    ; clk8sys      ; clk         ; -0.500       ; 1.500      ; 8.000      ;
-; 5.000 ; clk8via    ; clk8via    ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000 ; stretchCnt ; stretchCnt ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000 ; stretch    ; stretchCnt ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000 ; stretchCnt ; clk8sys    ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000 ; stretch    ; clk8sys    ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000 ; stretch    ; stretch    ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000 ; stretchCnt ; stretch    ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
-+-------+------------+------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                 ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; 1.500 ; clk8sys       ; stretchCnt[0] ; clk8sys      ; clk         ; 0.000        ; 1.500      ; 8.000      ;
+; 1.500 ; clk8sys       ; stretchCnt[1] ; clk8sys      ; clk         ; 0.000        ; 1.500      ; 8.000      ;
+; 1.500 ; clk8sys       ; clk8sys       ; clk8sys      ; clk         ; 0.000        ; 1.500      ; 8.000      ;
+; 1.500 ; clk8sys       ; stretch       ; clk8sys      ; clk         ; 0.000        ; 1.500      ; 8.000      ;
+; 2.000 ; clk8sys       ; stretchCnt[0] ; clk8sys      ; clk         ; -0.500       ; 1.500      ; 8.000      ;
+; 2.000 ; clk8sys       ; stretchCnt[1] ; clk8sys      ; clk         ; -0.500       ; 1.500      ; 8.000      ;
+; 2.000 ; clk8sys       ; clk8sys       ; clk8sys      ; clk         ; -0.500       ; 1.500      ; 8.000      ;
+; 2.000 ; clk8sys       ; stretch       ; clk8sys      ; clk         ; -0.500       ; 1.500      ; 8.000      ;
+; 5.000 ; clk8via       ; clk8via       ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretchCnt[0] ; stretchCnt[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretch       ; stretchCnt[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretch       ; stretchCnt[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretchCnt[0] ; stretchCnt[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretchCnt[1] ; stretchCnt[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretchCnt[1] ; clk8sys       ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretch       ; clk8sys       ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretchCnt[0] ; clk8sys       ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretch       ; stretch       ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretchCnt[1] ; stretch       ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; stretchCnt[0] ; stretch       ; clk          ; clk         ; 0.000        ; 0.000      ; 8.000      ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------+
@@ -217,7 +231,6 @@ No paths to report.
 ; 5.000 ; ramBank[7] ; ramBank[7] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000 ; ramBank[6] ; ramBank[6] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000 ; ramBank[5] ; ramBank[5] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
-; 5.000 ; ramBank[4] ; ramBank[4] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000 ; romBank[0] ; romBank[0] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000 ; ramBank[0] ; ramBank[0] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000 ; romBank[1] ; romBank[1] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
@@ -230,6 +243,7 @@ No paths to report.
 ; 5.000 ; ramBank[1] ; ramBank[1] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000 ; ramBank[2] ; ramBank[2] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
 ; 5.000 ; ramBank[3] ; ramBank[3] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
+; 5.000 ; ramBank[4] ; ramBank[4] ; clk8sys      ; clk8sys     ; 0.000        ; 0.000      ; 8.000      ;
 +-------+------------+------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -307,30 +321,34 @@ No paths to report.
 +--------+--------------+----------------+------------------+---------+------------+-----------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Minimum Pulse Width: 'clk'                                                                      ;
-+--------+--------------+----------------+------------------+-------+------------+----------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target         ;
-+--------+--------------+----------------+------------------+-------+------------+----------------+
-; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk   ; Rise       ; clk8sys        ;
-; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk   ; Rise       ; clk8sys        ;
-; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk   ; Rise       ; clk8via        ;
-; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk   ; Rise       ; clk8via        ;
-; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk   ; Rise       ; stretch        ;
-; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk   ; Rise       ; stretch        ;
-; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk   ; Rise       ; stretchCnt     ;
-; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk   ; Rise       ; stretchCnt     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk8sys|clk    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk8sys|clk    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk8via|clk    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk8via|clk    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|dataout    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|dataout    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; stretchCnt|clk ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; stretchCnt|clk ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; stretch|clk    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; stretch|clk    ;
-+--------+--------------+----------------+------------------+-------+------------+----------------+
++----------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'clk'                                                                         ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk   ; Rise       ; clk8sys           ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk   ; Rise       ; clk8sys           ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk   ; Rise       ; clk8via           ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk   ; Rise       ; clk8via           ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk   ; Rise       ; stretch           ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk   ; Rise       ; stretch           ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk   ; Rise       ; stretchCnt[0]     ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk   ; Rise       ; stretchCnt[0]     ;
+; -3.500 ; 0.500        ; 4.000          ; High Pulse Width ; clk   ; Rise       ; stretchCnt[1]     ;
+; -3.500 ; 0.500        ; 4.000          ; Low Pulse Width  ; clk   ; Rise       ; stretchCnt[1]     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk8sys|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk8sys|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk8via|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk8via|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|dataout       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|dataout       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; stretchCnt[0]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; stretchCnt[0]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; stretchCnt[1]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; stretchCnt[1]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; stretch|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; stretch|clk       ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -453,7 +471,6 @@ No paths to report.
 ; raEn         ; clk8sys    ;        ; 9.500  ; Rise       ; clk8sys         ;
 ; srlEn        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
 ; sysClk       ; clk8sys    ; 1.500  ;        ; Rise       ; clk8sys         ;
-; ymfEn        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
 ; adrBanks[*]  ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
 ;  adrBanks[0] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
 ;  adrBanks[1] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
@@ -473,7 +490,6 @@ No paths to report.
 ; raEn         ; clk8sys    ; 9.500  ;        ; Fall       ; clk8sys         ;
 ; srlEn        ; clk8sys    ;        ; 9.500  ; Fall       ; clk8sys         ;
 ; sysClk       ; clk8sys    ;        ; 1.500  ; Fall       ; clk8sys         ;
-; ymfEn        ; clk8sys    ;        ; 9.500  ; Fall       ; clk8sys         ;
 +--------------+------------+--------+--------+------------+-----------------+
 
 
@@ -489,7 +505,6 @@ No paths to report.
 ; raEn         ; clk8sys    ;        ; 9.500  ; Rise       ; clk8sys         ;
 ; srlEn        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
 ; sysClk       ; clk8sys    ; 1.500  ;        ; Rise       ; clk8sys         ;
-; ymfEn        ; clk8sys    ; 9.500  ;        ; Rise       ; clk8sys         ;
 ; adrBanks[*]  ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
 ;  adrBanks[0] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
 ;  adrBanks[1] ; clk8sys    ; 17.500 ; 17.500 ; Fall       ; clk8sys         ;
@@ -509,7 +524,6 @@ No paths to report.
 ; raEn         ; clk8sys    ; 9.500  ;        ; Fall       ; clk8sys         ;
 ; srlEn        ; clk8sys    ;        ; 9.500  ; Fall       ; clk8sys         ;
 ; sysClk       ; clk8sys    ;        ; 1.500  ; Fall       ; clk8sys         ;
-; ymfEn        ; clk8sys    ;        ; 9.500  ; Fall       ; clk8sys         ;
 +--------------+------------+--------+--------+------------+-----------------+
 
 
@@ -846,8 +860,8 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 11       ; 0        ; 0        ; 0        ;
-; clk8sys    ; clk      ; 4        ; 4        ; 0        ; 0        ;
+; clk        ; clk      ; 19       ; 0        ; 0        ; 0        ;
+; clk8sys    ; clk      ; 5        ; 5        ; 0        ; 0        ;
 ; clk8sys    ; clk8sys  ; 0        ; 0        ; 0        ; 64       ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -858,8 +872,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 11       ; 0        ; 0        ; 0        ;
-; clk8sys    ; clk      ; 4        ; 4        ; 0        ; 0        ;
+; clk        ; clk      ; 19       ; 0        ; 0        ; 0        ;
+; clk8sys    ; clk      ; 5        ; 5        ; 0        ; 0        ;
 ; clk8sys    ; clk8sys  ; 0        ; 0        ; 0        ; 64       ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -885,9 +899,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 27    ; 27   ;
-; Unconstrained Input Port Paths  ; 490   ; 490  ;
+; Unconstrained Input Port Paths  ; 505   ; 505  ;
 ; Unconstrained Output Ports      ; 25    ; 25   ;
-; Unconstrained Output Port Paths ; 188   ; 188  ;
+; Unconstrained Output Port Paths ; 187   ; 187  ;
 +---------------------------------+-------+------+
 
 
@@ -897,7 +911,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Aug 25 08:04:57 2022
+    Info: Processing started: Thu Sep 01 17:07:56 2022
 Info: Command: quartus_sta JB6502ATF1508PLCC -c JB6502ATF1508PLCC
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -915,7 +929,7 @@ Info (332146): Worst-case setup slack is -9.000
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
     Info (332119):    -9.000      -144.000 clk8sys 
-    Info (332119):    -9.000       -36.000 clk 
+    Info (332119):    -9.000       -45.000 clk 
 Info (332146): Worst-case hold slack is 1.500
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -927,14 +941,14 @@ Info (332146): Worst-case minimum pulse width slack is -3.500
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
     Info (332119):    -3.500      -112.000 clk8sys 
-    Info (332119):    -3.500       -28.000 clk 
+    Info (332119):    -3.500       -35.000 clk 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4504 megabytes
-    Info: Processing ended: Thu Aug 25 08:04:58 2022
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Sep 01 17:07:56 2022
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

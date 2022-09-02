@@ -1,5 +1,5 @@
 Analysis & Synthesis report for JB6502ATF1508PLCC
-Thu Aug 25 08:04:54 2022
+Thu Sep 01 17:07:53 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -39,12 +39,12 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Aug 25 08:04:54 2022           ;
+; Analysis & Synthesis Status ; Successful - Thu Sep 01 17:07:53 2022           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; JB6502ATF1508PLCC                               ;
 ; Top-level Entity Name       ; JB6502ATF1508PLCC                               ;
 ; Family                      ; MAX7000S                                        ;
-; Total macrocells            ; 43                                              ;
+; Total macrocells            ; 44                                              ;
 ; Total pins                  ; 53                                              ;
 +-----------------------------+-------------------------------------------------+
 
@@ -138,13 +138,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------+----------------------+
 ; Resource             ; Usage                ;
 +----------------------+----------------------+
-; Logic cells          ; 43                   ;
-; Total registers      ; 20                   ;
+; Logic cells          ; 44                   ;
+; Total registers      ; 21                   ;
 ; I/O pins             ; 53                   ;
 ; Maximum fan-out node ; adrBusHi[6]          ;
-; Maximum fan-out      ; 39                   ;
-; Total fan-out        ; 589                  ;
-; Average fan-out      ; 6.14                 ;
+; Maximum fan-out      ; 40                   ;
+; Total fan-out        ; 610                  ;
+; Average fan-out      ; 6.29                 ;
 +----------------------+----------------------+
 
 
@@ -153,7 +153,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+------------+------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+------------+------+---------------------+--------------+
-; |JB6502ATF1508PLCC         ; 43         ; 53   ; |JB6502ATF1508PLCC  ; work         ;
+; |JB6502ATF1508PLCC         ; 44         ; 53   ; |JB6502ATF1508PLCC  ; work         ;
 +----------------------------+------------+------+---------------------+--------------+
 
 
@@ -163,13 +163,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Aug 25 08:04:53 2022
+    Info: Processing started: Thu Sep 01 17:07:52 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JB6502ATF1508PLCC -c JB6502ATF1508PLCC
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file jb6502atf1508plcc.v
     Info (12023): Found entity 1: JB6502ATF1508PLCC
 Info (12127): Elaborating entity "JB6502ATF1508PLCC" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at JB6502ATF1508PLCC.v(97): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at JB6502ATF1508PLCC.v(97): truncated value with size 32 to match size of target (2)
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "ioEn" to the node "raEn" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "v0En" to the node "datDD" into an OR gate
@@ -182,14 +182,14 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
 Info (280013): Promoted pin-driven signal(s) to global signal
     Info (280014): Promoted clock signal driven by pin "clk" to global clock signal
     Info (280016): Promoted output enable signal driven by pin "oe" to global output enable signal
-Info (21057): Implemented 96 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 97 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 28 input pins
     Info (21059): Implemented 24 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21063): Implemented 43 macrocells
+    Info (21063): Implemented 44 macrocells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 4555 megabytes
-    Info: Processing ended: Thu Aug 25 08:04:54 2022
+    Info: Processing ended: Thu Sep 01 17:07:53 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
