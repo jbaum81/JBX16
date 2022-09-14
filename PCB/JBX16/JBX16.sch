@@ -6980,7 +6980,7 @@ P 19100 10050
 AR Path="/604CE155/630B3D2B" Ref="R?"  Part="1" 
 AR Path="/630B3D2B" Ref="R46"  Part="1" 
 F 0 "R46" V 19000 10000 50  0000 L CNN
-F 1 "1K" V 19100 10000 50  0000 L CNN
+F 1 "4.7K" V 19050 9800 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 19100 10050 50  0001 C CNN
 F 3 "~" H 19100 10050 50  0001 C CNN
 	1    19100 10050
@@ -9763,4 +9763,24 @@ Wire Wire Line
 	15000 3900 15150 3900
 Wire Wire Line
 	15650 3900 15700 3900
+Wire Notes Line style dash_dot rgb(255, 0, 0)
+	6650 10500 6650 9150
+Wire Notes Line style dash_dot rgb(255, 0, 0)
+	6650 9150 5150 9150
+Wire Notes Line style dash_dot rgb(255, 0, 0)
+	5150 9150 5150 10500
+Wire Notes Line style dash_dot rgb(255, 0, 0)
+	5150 10500 6650 10500
+Text Notes 5200 9400 0    50   ~ 0
+failed ATX loading circuit. \nDo not install
+Wire Notes Line style dash_dot rgb(255, 0, 0)
+	18600 10750 19250 10750
+Wire Notes Line style dash_dot rgb(255, 0, 0)
+	19250 10750 19250 9350
+Wire Notes Line style dash_dot rgb(255, 0, 0)
+	19250 9350 18600 9350
+Wire Notes Line style dash_dot rgb(255, 0, 0)
+	18600 9350 18600 10750
+Text Notes 18650 9500 0    50   ~ 0
+DNI, \nP-FET Fix?
 $EndSCHEMATC
