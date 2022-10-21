@@ -26,12 +26,14 @@
 	output activity
 	);
 	
-	reg [7:0] ramBank;
-	reg [7:0] romBank;
-	reg clk8sys; 
-	reg clk8via;
-	reg stretch; 
-	reg [1:0] stretchCnt; 
+	reg [7:0] ramBank = 0;
+	reg [7:0] romBank = 0;
+	reg clk8sys = 0;
+	reg clk8via = 0;
+	reg stretch = 0;
+	reg [1:0] stretchCnt = 0;
+	reg [15:0] porCnt = 0;
+	reg runClk = 0;
 
 	initial begin
 		ramBank=8'h00;
@@ -40,7 +42,15 @@
 		clk8via = 0;
 		stretch = 0;
 		stretchCnt = 0;
+		porCnt = 0;
+		runClk = 0;
 	end
+	
+	always @(posedge clk) begin 
+		if (!runClk) porCnt <= porCnt +1;
+		if (porCnt == 16'hffff) runClk <= 1;
+	end
+	
 		
 	assign sysClk = clk8sys;
 	assign viaClk = clk8via;
@@ -92,23 +102,30 @@
 
 	//Clocking and Stretching
 	always @(posedge clk) begin 
-		clk8via <= !clk8via; 
-		stretchCnt <= stretchCnt+1; 
-		if (stretch && stretchCnt == 2'b11) begin
-			if(clk8sys) begin 
-				clk8sys <= 0;
+		if (runClk) begin
+			clk8via <= !clk8via; 
+			stretchCnt <= stretchCnt+1; 
+			if (stretch && stretchCnt == 2'b11) begin
+				if(clk8sys) begin 
+					clk8sys <= 0;
+				end
+				else begin
+					clk8sys <= 1;
+					stretch <= 0;
+				end
+			end else if(!stretch) begin
+				clk8sys <= !clk8sys;
+				if(!clk8sys && adrBusHi == 8'h9f && adrBusLo[7:1] == 7'b0100000) begin
+					stretch <= 1;
+					stretchCnt <=0;
+				end
 			end
-			else begin
-				clk8sys <= 1;
-				stretch <= 0;
-			end
-		end else if(!stretch) begin
-			clk8sys <= !clk8sys;
-			if(!clk8sys && adrBusHi == 8'h9f && adrBusLo[7:1] == 7'b0100000) begin
-				stretch <= 1;
-				stretchCnt <=0;
-			end
+		end else begin
+			clk8via <= 0;
+			clk8sys <= 0;
+			stretch <= 0;
 		end
+		
 	end
 
 endmodule
