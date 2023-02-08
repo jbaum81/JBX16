@@ -1,5 +1,5 @@
 Fitter report for JB6502ATF1508PLCC
-Fri Oct 21 01:19:27 2022
+Wed Jan 04 05:33:30 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -54,7 +54,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Fitter Summary                                                              ;
 +---------------------------+-------------------------------------------------+
-; Fitter Status             ; Successful - Fri Oct 21 01:19:27 2022           ;
+; Fitter Status             ; Successful - Wed Jan 04 05:33:30 2023           ;
 ; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name             ; JB6502ATF1508PLCC                               ;
 ; Top-level Entity Name     ; JB6502ATF1508PLCC                               ;
@@ -617,9 +617,9 @@ Note: User assignments will override these defaults. The user specified values a
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119006): Selected device EPM7128SLC84-10 for design "JB6502ATF1508PLCC"
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4675 megabytes
-    Info: Processing ended: Fri Oct 21 01:19:27 2022
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 4676 megabytes
+    Info: Processing ended: Wed Jan 04 05:33:30 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

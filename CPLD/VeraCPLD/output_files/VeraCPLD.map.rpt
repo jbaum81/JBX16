@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VeraCPLD
-Sat Jul 30 10:06:02 2022
+Mon Feb 06 17:29:44 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -39,12 +39,12 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Jul 30 10:06:02 2022           ;
+; Analysis & Synthesis Status ; Successful - Mon Feb 06 17:29:44 2023           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; VeraCPLD                                        ;
 ; Top-level Entity Name       ; VeraCPLD                                        ;
 ; Family                      ; MAX7000S                                        ;
-; Total macrocells            ; 5                                               ;
+; Total macrocells            ; 4                                               ;
 ; Total pins                  ; 18                                              ;
 +-----------------------------+-------------------------------------------------+
 
@@ -138,13 +138,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------+----------------------+
 ; Resource             ; Usage                ;
 +----------------------+----------------------+
-; Logic cells          ; 5                    ;
+; Logic cells          ; 4                    ;
 ; Total registers      ; 0                    ;
 ; I/O pins             ; 18                   ;
-; Maximum fan-out node ; rw                   ;
-; Maximum fan-out      ; 5                    ;
-; Total fan-out        ; 69                   ;
-; Average fan-out      ; 3.00                 ;
+; Maximum fan-out node ; clk                  ;
+; Maximum fan-out      ; 4                    ;
+; Total fan-out        ; 56                   ;
+; Average fan-out      ; 2.55                 ;
 +----------------------+----------------------+
 
 
@@ -153,7 +153,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+------------+------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+------------+------+---------------------+--------------+
-; |VeraCPLD                  ; 5          ; 18   ; |VeraCPLD           ; work         ;
+; |VeraCPLD                  ; 4          ; 18   ; |VeraCPLD           ; work         ;
 +----------------------------+------------+------+---------------------+--------------+
 
 
@@ -163,23 +163,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Jul 30 10:06:01 2022
+    Info: Processing started: Mon Feb 06 17:29:43 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VeraCPLD -c VeraCPLD
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file veracpld.v
     Info (12023): Found entity 1: VeraCPLD
+Warning (10236): Verilog HDL Implicit Net warning at VeraCPLD.v(17): created implicit net for "datDD"
 Info (12127): Elaborating entity "VeraCPLD" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at VeraCPLD.v(17): object "datDD" assigned a value but never read
 Warning (10230): Verilog HDL assignment warning at VeraCPLD.v(13): truncated value with size 32 to match size of target (1)
 Warning (10230): Verilog HDL assignment warning at VeraCPLD.v(14): truncated value with size 32 to match size of target (1)
 Warning (10230): Verilog HDL assignment warning at VeraCPLD.v(15): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at VeraCPLD.v(16): truncated value with size 32 to match size of target (1)
-Info (21057): Implemented 23 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21063): Implemented 5 macrocells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4559 megabytes
-    Info: Processing ended: Sat Jul 30 10:06:02 2022
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "adr[0]"
+Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21063): Implemented 4 macrocells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4563 megabytes
+    Info: Processing ended: Mon Feb 06 17:29:44 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

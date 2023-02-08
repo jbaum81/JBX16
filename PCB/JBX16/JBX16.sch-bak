@@ -9465,27 +9465,16 @@ F 3 "~" H 21700 10200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Transistor_BJT:BC307 Q7
-U 1 1 6F3D67B4
-P 3900 4950
-F 0 "Q7" H 3800 4800 50  0000 L CNN
-F 1 "BC327" V 4100 4850 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4100 4875 50  0001 L CIN
-F 3 "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF" H 3900 4950 50  0001 L CNN
-	1    3900 4950
-	1    0    0    1   
-$EndComp
-$Comp
 L power:+5V #PWR?
 U 1 1 6F3D67C1
-P 4000 4700
+P 3950 4750
 AR Path="/604CE155/6F3D67C1" Ref="#PWR?"  Part="1" 
 AR Path="/6F3D67C1" Ref="#PWR0270"  Part="1" 
-F 0 "#PWR0270" H 4000 4550 50  0001 C CNN
-F 1 "+5V" H 4015 4873 50  0000 C CNN
-F 2 "" H 4000 4700 50  0001 C CNN
-F 3 "" H 4000 4700 50  0001 C CNN
-	1    4000 4700
+F 0 "#PWR0270" H 3950 4600 50  0001 C CNN
+F 1 "+5V" H 3965 4923 50  0000 C CNN
+F 2 "" H 3950 4750 50  0001 C CNN
+F 3 "" H 3950 4750 50  0001 C CNN
+	1    3950 4750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -9503,11 +9492,7 @@ F 3 "~" H 3550 4950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3400 4950 3450 4950
-Wire Wire Line
-	3650 4950 3700 4950
-Wire Wire Line
-	4000 4700 4000 4750
-Text GLabel 4000 5150 3    50   Input ~ 0
+Text GLabel 3950 5150 3    50   Input ~ 0
 CPLDACT
 Text GLabel 18750 6950 2    50   Input ~ 0
 CPLDACT
@@ -9654,15 +9639,15 @@ F 3 "http://www.vishay.com/docs/70209/70209.pdf" H 19000 9900 50  0001 L CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Transistor_FET:BS250 Q?
+L Transistor_FET:BS250 Q7
 U 1 1 635EAC3E
-P 4050 3900
-F 0 "Q?" H 4254 3946 50  0000 L CNN
-F 1 "BS250" H 4254 3855 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4250 3825 50  0001 L CIN
-F 3 "http://www.vishay.com/docs/70209/70209.pdf" H 4050 3900 50  0001 L CNN
-	1    4050 3900
-	-1   0    0    1   
+P 3850 4950
+F 0 "Q7" H 3750 4750 50  0000 L CNN
+F 1 "BS250" V 4100 4850 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4050 4875 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/70209/70209.pdf" H 3850 4950 50  0001 L CNN
+	1    3850 4950
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	19200 9900 19250 9900

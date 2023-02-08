@@ -62,20 +62,20 @@ CHIP  "VeraCPLD"  ASSIGNED TO AN: EPM7032STC44-7
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 TDI                          : 1         : input  : TTL               :         :           : N              
-adr[0]                       : 2         : input  : TTL               :         :           : Y              
-adr[1]                       : 3         : input  : TTL               :         :           : Y              
+adr[1]                       : 2         : input  : TTL               :         :           : Y              
+adr[2]                       : 3         : input  : TTL               :         :           : Y              
 GND                          : 4         : gnd    :                   :         :           :                
-adr[2]                       : 5         : input  : TTL               :         :           : Y              
-adr[3]                       : 6         : input  : TTL               :         :           : Y              
+adr[3]                       : 5         : input  : TTL               :         :           : Y              
+adr[4]                       : 6         : input  : TTL               :         :           : Y              
 TMS                          : 7         : input  : TTL               :         :           : N              
-adr[4]                       : 8         : input  : TTL               :         :           : Y              
+adr[5]                       : 8         : input  : TTL               :         :           : Y              
 VCC                          : 9         : power  :                   :         :           :                
-adr[5]                       : 10        : input  : TTL               :         :           : Y              
-adr[6]                       : 11        : input  : TTL               :         :           : Y              
-adr[7]                       : 12        : input  : TTL               :         :           : Y              
-adr[8]                       : 13        : input  : TTL               :         :           : Y              
-adr[9]                       : 14        : input  : TTL               :         :           : Y              
-adr[10]                      : 15        : input  : TTL               :         :           : Y              
+adr[6]                       : 10        : input  : TTL               :         :           : Y              
+adr[7]                       : 11        : input  : TTL               :         :           : Y              
+adr[8]                       : 12        : input  : TTL               :         :           : Y              
+adr[9]                       : 13        : input  : TTL               :         :           : Y              
+adr[10]                      : 14        : input  : TTL               :         :           : Y              
+adr[11]                      : 15        : input  : TTL               :         :           : Y              
 GND                          : 16        : gnd    :                   :         :           :                
 VCC                          : 17        : power  :                   :         :           :                
 RESERVED                     : 18        :        :                   :         :           :                
@@ -91,7 +91,7 @@ RESERVED                     : 27        :        :                   :         
 RESERVED                     : 28        :        :                   :         :           :                
 VCC                          : 29        : power  :                   :         :           :                
 rLED                         : 30        : output : TTL               :         :           : Y              
-datDD                        : 31        : output : TTL               :         :           : Y              
+RESERVED                     : 31        :        :                   :         :           :                
 TDO                          : 32        : output : TTL               :         :           : N              
 rdB                          : 33        : output : TTL               :         :           : Y              
 wrB                          : 34        : output : TTL               :         :           : Y              
@@ -104,4 +104,4 @@ GND+                         : 40        :        :                   :         
 VCC                          : 41        : power  :                   :         :           :                
 rw                           : 42        : input  : TTL               :         :           : Y              
 RESERVED                     : 43        :        :                   :         :           :                
-RESERVED                     : 44        :        :                   :         :           :                
+adr[0]                       : 44        : input  : TTL               :         :           : Y              

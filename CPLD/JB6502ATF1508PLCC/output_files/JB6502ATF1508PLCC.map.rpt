@@ -1,5 +1,5 @@
 Analysis & Synthesis report for JB6502ATF1508PLCC
-Fri Oct 21 01:19:26 2022
+Wed Jan 04 05:33:29 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Oct 21 01:19:26 2022           ;
+; Analysis & Synthesis Status ; Successful - Wed Jan 04 05:33:29 2023           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; JB6502ATF1508PLCC                               ;
 ; Top-level Entity Name       ; JB6502ATF1508PLCC                               ;
@@ -202,7 +202,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Oct 21 01:19:25 2022
+    Info: Processing started: Wed Jan 04 05:33:27 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JB6502ATF1508PLCC -c JB6502ATF1508PLCC
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file jb6502atf1508plcc.v
@@ -235,9 +235,9 @@ Info (21057): Implemented 114 device resources after synthesis - the final resou
     Info (21060): Implemented 1 bidirectional pins
     Info (21063): Implemented 61 macrocells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4574 megabytes
-    Info: Processing ended: Fri Oct 21 01:19:26 2022
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4565 megabytes
+    Info: Processing ended: Wed Jan 04 05:33:29 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 
