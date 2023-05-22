@@ -57,7 +57,7 @@
 	assign oeLow = (oe) ? ~rw : 1'bz;
 	assign clkWr = (oe) ? ~(~rw && sysClk) : 1'bz;
 	assign datDD = (rw && clk8sys && adrBusHi == 8'h9f && v0En && v1En) ? 1'b0 : 1'bz;
-	
+	//assign datDD = 1'bz;
 	
 	wire [7:0] _adrBanks = (adrBusHi[7:5] == 3'b101) ? ramBank : ((adrBusHi[7:6] == 2'b11) ? romBank : 8'h00);
 	assign adrBanks = (oe) ? _adrBanks : 8'bzzzzzzzz;

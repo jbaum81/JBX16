@@ -1,5 +1,5 @@
 Assembler report for JB6502ATF1508PLCC
-Wed Jan 04 05:33:31 2023
+Fri Mar 10 23:15:22 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Jan 04 05:33:31 2023 ;
+; Assembler Status      ; Successful - Fri Mar 10 23:15:22 2023 ;
 ; Revision Name         ; JB6502ATF1508PLCC                     ;
 ; Top-level Entity Name ; JB6502ATF1508PLCC                     ;
 ; Family                ; MAX7000S                              ;
@@ -99,12 +99,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jan 04 05:33:31 2023
+    Info: Processing started: Fri Mar 10 23:15:22 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off JB6502ATF1508PLCC -c JB6502ATF1508PLCC
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4501 megabytes
-    Info: Processing ended: Wed Jan 04 05:33:31 2023
+    Info: Peak virtual memory: 4500 megabytes
+    Info: Processing ended: Fri Mar 10 23:15:22 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
