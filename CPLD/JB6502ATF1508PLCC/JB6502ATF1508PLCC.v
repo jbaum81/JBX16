@@ -5,6 +5,7 @@
 	input oe,
 	input rw,
 	input rst,
+	input vpp,
 	input [7:0] adrBusLo,
 	input [7:0] adrBusHi,
 	input [7:0] datBus,
@@ -28,6 +29,7 @@
 	
 	reg [7:0] ramBank = 0;
 	reg [7:0] romBank = 0;
+	reg [7:0] romBank_r = 0;
 	reg clk8sys = 0;
 	reg clk8via = 0;
 	reg stretch = 0;
@@ -88,16 +90,17 @@
 				ramBank <= datBus;
 		end
 	end
+	
+	always @* begin
+		if (~rst || ~vpp)
+			romBank <= 0;
+		else
+			romBank <= romBank_r;
+	end
 
 	always @(negedge sysClk) begin
-		if (~rst) begin
-			romBank <= 0;
-		end
-		else begin
-			if ({adrBusHi,adrBusLo} == 16'h0001 && ~rw) begin
-				romBank <= datBus;
-			end
-		end
+		if ({adrBusHi,adrBusLo} == 16'h0001 && ~rw)
+			romBank_r <= datBus;
 	end
 
 	//Clocking and Stretching
